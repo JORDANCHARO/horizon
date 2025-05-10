@@ -251,9 +251,47 @@ import Layout from '../layouts/Layout.astro';
   transform: translateY(-3px) scale(1.04);
   box-shadow: 0 8px 32px #ffb30055;
 }
-@media (max-width: 600px) {
-  .titre-section { font-size: 1.5rem; }
-  .card-service { padding: 1rem; }
-  .btn-premium { padding: 0.7rem 1.2rem; font-size: 1rem; }
+@media (max-width: 1024px) {
+  .page-section {
+    padding: 2rem 1rem;
+  }
+  .titre-section {
+    font-size: 1.7rem;
+  }
+}
+@media (max-width: 768px) {
+  .page-section {
+    padding: 1.5rem 0.5rem;
+  }
+  .titre-section {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+  .grid.md\:grid-cols-2, .grid.md\:grid-cols-3 {
+    grid-template-columns: 1fr !important;
+    gap: 1.2rem;
+  }
+  .card-service {
+    padding: 1rem !important;
+    margin-bottom: 1.2rem;
+    text-align: center;
+  }
+  .card-service svg {
+    margin: 0 auto 1rem auto;
+    display: block;
+  }
+  .btn-premium {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.8rem 1.2rem;
+    margin-top: 1rem;
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 </style> 

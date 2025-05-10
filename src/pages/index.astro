@@ -253,9 +253,59 @@ import Layout from '../layouts/Layout.astro';
 	transform: translateY(-4px) scale(1.04);
 	box-shadow: 0 8px 32px #6366f1cc;
 }
-@media (max-width: 600px) {
-	.titre-bluffant { font-size: 2rem; }
-	.sous-titre-bluffant { font-size: 1.1rem; }
-	.btn-bluffant { font-size: 1rem; padding: 0.8rem 1.5rem; }
+@media (max-width: 1024px) {
+	#accueil-bg {
+		min-height: 40vh;
+		padding: 1.2rem 1rem;
+	}
+	.titre-bluffant {
+		font-size: 1.7rem;
+	}
+	.sous-titre-bluffant {
+		font-size: 1.1rem;
+	}
+}
+@media (max-width: 768px) {
+	#accueil-bg {
+		min-height: 30vh;
+		padding: 1.5rem 0.5rem;
+	}
+	.titre-bluffant {
+		font-size: 1.3rem;
+		margin-bottom: 1rem;
+	}
+	.sous-titre-bluffant {
+		font-size: 1rem;
+		margin-bottom: 1.2rem;
+	}
+	.flex.flex-col.md\:flex-row.justify-center.gap-6.mt-10 {
+		flex-direction: column;
+		gap: 0.7rem;
+		align-items: stretch;
+	}
+	.btn-bluffant {
+		width: 100%;
+		font-size: 1rem;
+		padding: 0.8rem 1.2rem;
+		margin: 0.3rem 0;
+	}
+	section, .container {
+		padding: 1.2rem 0.5rem !important;
+	}
+	.card-service, .bg-white.p-6.rounded-lg.shadow-md, .bg-white.p-8.rounded-lg.shadow-md {
+		padding: 1rem !important;
+		margin-bottom: 1.2rem;
+	}
+	.grid.md\:grid-cols-3, .grid.md\:grid-cols-2 {
+		grid-template-columns: 1fr !important;
+		gap: 1.2rem;
+	}
+}
+@media (min-width: 1280px) {
+	.container {
+		max-width: 1200px;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 </style>
