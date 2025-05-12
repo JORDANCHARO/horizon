@@ -2,315 +2,120 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Horizon Impact - Nos Services">
-  <div class="relative bg-indigo-600 text-white">
-    <div class="absolute inset-0 bg-black opacity-50"></div>
-    <div class="relative container mx-auto px-4 py-32">
-      <h1 class="text-4xl font-bold text-center mb-8">Nos Services</h1>
-      <p class="text-xl text-center max-w-3xl mx-auto">
-        Découvrez comment nous accompagnons les PME et les jeunes talents dans leur développement professionnel.
-      </p>
-    </div>
-  </div>
+<Layout title="Horizon D'Impact 3.0 - Nos Services">
+	<section data-animate style="background: linear-gradient(120deg, #1a237e 60%, #3949ab 100%); color: #fff; padding: 3.5rem 1rem 2.5rem 1rem; text-align: center;">
+		<h1 style="font-size: 2.3rem; font-weight: 800; margin-bottom: 1.2rem; letter-spacing: 0.5px;">Nos Services</h1>
+		<p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto 2rem auto;">Nous accompagnons les PME et les jeunes talents dans leur développement professionnel.</p>
+	</section>
 
-  <section data-animate style="background: linear-gradient(120deg, #1a237e 60%, #3949ab 100%); color: #fff; padding: 2.5rem 1rem 1.5rem 1rem; text-align: center;">
-    <h1 style="font-size: 2rem; font-weight: 800; margin-bottom: 1.2rem; letter-spacing: 0.5px;">Nos Services</h1>
-    <p style="font-size: 1.1rem; max-width: 600px; margin: 0 auto;">Des solutions digitales sur-mesure pour booster votre activité et votre visibilité.</p>
-  </section>
-  <section data-animate style="max-width: 1100px; margin: 0 auto; padding: 2.5rem 1rem 1.5rem 1rem; display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
-    <div style="background: #fff; border-radius: 1.5rem; box-shadow: 0 2px 12px #1a237e11; flex: 1 1 260px; min-width: 240px; max-width: 340px; padding: 2rem 1.2rem; text-align: center;">
-      <h2 style="color: #1a237e; font-size: 1.2rem; font-weight: 700; margin-bottom: 0.7rem;">Création de sites web</h2>
-      <p style="color: #3949ab; font-size: 1rem;">Sites vitrines, e-commerce, blogs, portfolios, adaptés à tous les écrans.</p>
-    </div>
-    <div style="background: #fff; border-radius: 1.5rem; box-shadow: 0 2px 12px #1a237e11; flex: 1 1 260px; min-width: 240px; max-width: 340px; padding: 2rem 1.2rem; text-align: center;">
-      <h2 style="color: #1a237e; font-size: 1.2rem; font-weight: 700; margin-bottom: 0.7rem;">Stratégie digitale</h2>
-      <p style="color: #3949ab; font-size: 1rem;">Audit, conseil, référencement (SEO), réseaux sociaux, campagnes publicitaires.</p>
-    </div>
-    <div style="background: #fff; border-radius: 1.5rem; box-shadow: 0 2px 12px #1a237e11; flex: 1 1 260px; min-width: 240px; max-width: 340px; padding: 2rem 1.2rem; text-align: center;">
-      <h2 style="color: #1a237e; font-size: 1.2rem; font-weight: 700; margin-bottom: 0.7rem;">Support & Formation</h2>
-      <p style="color: #3949ab; font-size: 1rem;">Assistance, maintenance, formations personnalisées pour vous et vos équipes.</p>
-    </div>
-  </section>
+	<section data-animate style="max-width: 1200px; margin: 0 auto; padding: 2.5rem 1rem;">
+		<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+			<!-- Service 1 -->
+			<div style="background: #fff; border-radius: 1.5rem; box-shadow: 0 2px 12px #1a237e11; padding: 2rem;">
+				<h2 style="color: #1a237e; font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">Accompagnement des PME</h2>
+				<p style="color: #3949ab; margin-bottom: 1.5rem;">Nous aidons les PME à identifier, former et intégrer les meilleurs jeunes talents pour leur croissance.</p>
+				<ul style="list-style: none; padding: 0; margin: 0;">
+					<li style="color: #3949ab; margin-bottom: 0.8rem; display: flex; align-items: center;">
+						<span style="color: #ffb300; margin-right: 0.5rem;">✓</span>
+						Identification des besoins en compétences
+					</li>
+					<li style="color: #3949ab; margin-bottom: 0.8rem; display: flex; align-items: center;">
+						<span style="color: #ffb300; margin-right: 0.5rem;">✓</span>
+						Recrutement de jeunes talents
+					</li>
+					<li style="color: #3949ab; display: flex; align-items: center;">
+						<span style="color: #ffb300; margin-right: 0.5rem;">✓</span>
+						Suivi post-intégration
+					</li>
+				</ul>
+			</div>
 
-  <section class="py-16">
-    <div class="container mx-auto px-4">
-      <div class="max-w-4xl mx-auto">
-        <div class="mb-16">
-          <h2 class="text-3xl font-bold mb-8">Accompagnement des PME</h2>
-          <div class="bg-white p-8 rounded-lg shadow-md">
-            <div class="flex items-center mb-6">
-              <div class="bg-indigo-100 p-3 rounded-lg mr-4">
-                <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                </svg>
-              </div>
-              <h3 class="text-2xl font-semibold">Notre approche</h3>
-            </div>
-            <p class="text-gray-600 mb-6">
-              Nous accompagnons les PME dans leur développement en leur permettant d'accéder à des talents qualifiés et motivés.
-            </p>
-            <div class="space-y-4">
-              <div class="flex items-start">
-                <div class="bg-indigo-100 p-2 rounded-full mr-4">
-                  <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <div>
-                  <h4 class="font-semibold mb-2">Analyse des besoins</h4>
-                  <p class="text-gray-600">Évaluation précise des compétences recherchées et des objectifs de l'entreprise.</p>
-                </div>
-              </div>
-              <div class="flex items-start">
-                <div class="bg-indigo-100 p-2 rounded-full mr-4">
-                  <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <div>
-                  <h4 class="font-semibold mb-2">Recrutement ciblé</h4>
-                  <p class="text-gray-600">Sélection des meilleurs profils correspondant aux besoins spécifiques.</p>
-                </div>
-              </div>
-              <div class="flex items-start">
-                <div class="bg-indigo-100 p-2 rounded-full mr-4">
-                  <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <div>
-                  <h4 class="font-semibold mb-2">Formation sur mesure</h4>
-                  <p class="text-gray-600">Programmes de formation adaptés aux besoins spécifiques de l'entreprise.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+			<!-- Service 2 -->
+			<div style="background: #fff; border-radius: 1.5rem; box-shadow: 0 2px 12px #1a237e11; padding: 2rem;">
+				<h2 style="color: #1a237e; font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">Formation des jeunes</h2>
+				<p style="color: #3949ab; margin-bottom: 1.5rem;">Nous formons les jeunes talents aux compétences recherchées par les entreprises d'aujourd'hui.</p>
+				<ul style="list-style: none; padding: 0; margin: 0;">
+					<li style="color: #3949ab; margin-bottom: 0.8rem; display: flex; align-items: center;">
+						<span style="color: #ffb300; margin-right: 0.5rem;">✓</span>
+						Formation aux compétences techniques
+					</li>
+					<li style="color: #3949ab; margin-bottom: 0.8rem; display: flex; align-items: center;">
+						<span style="color: #ffb300; margin-right: 0.5rem;">✓</span>
+						Développement des soft skills
+					</li>
+					<li style="color: #3949ab; display: flex; align-items: center;">
+						<span style="color: #ffb300; margin-right: 0.5rem;">✓</span>
+						Préparation à l'insertion professionnelle
+					</li>
+				</ul>
+			</div>
 
-        <div class="mb-16">
-          <h2 class="text-3xl font-bold mb-8">Formation des jeunes talents</h2>
-          <div class="bg-white p-8 rounded-lg shadow-md">
-            <div class="flex items-center mb-6">
-              <div class="bg-indigo-100 p-3 rounded-lg mr-4">
-                <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                </svg>
-              </div>
-              <h3 class="text-2xl font-semibold">Notre programme</h3>
-            </div>
-            <p class="text-gray-600 mb-6">
-              Nous formons les jeunes talents aux compétences recherchées par les entreprises d'aujourd'hui.
-            </p>
-            <div class="space-y-4">
-              <div class="flex items-start">
-                <div class="bg-indigo-100 p-2 rounded-full mr-4">
-                  <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <div>
-                  <h4 class="font-semibold mb-2">Formation technique</h4>
-                  <p class="text-gray-600">Acquisition des compétences techniques nécessaires au marché du travail.</p>
-                </div>
-              </div>
-              <div class="flex items-start">
-                <div class="bg-indigo-100 p-2 rounded-full mr-4">
-                  <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <div>
-                  <h4 class="font-semibold mb-2">Développement personnel</h4>
-                  <p class="text-gray-600">Renforcement des compétences comportementales et de la confiance en soi.</p>
-                </div>
-              </div>
-              <div class="flex items-start">
-                <div class="bg-indigo-100 p-2 rounded-full mr-4">
-                  <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <div>
-                  <h4 class="font-semibold mb-2">Mentorat</h4>
-                  <p class="text-gray-600">Accompagnement personnalisé par des professionnels expérimentés.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+			<!-- Service 3 -->
+			<div style="background: #fff; border-radius: 1.5rem; box-shadow: 0 2px 12px #1a237e11; padding: 2rem;">
+				<h2 style="color: #1a237e; font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">Intégration professionnelle</h2>
+				<p style="color: #3949ab; margin-bottom: 1.5rem;">Nous assurons un suivi personnalisé pour une intégration réussie dans l'entreprise.</p>
+				<ul style="list-style: none; padding: 0; margin: 0;">
+					<li style="color: #3949ab; margin-bottom: 0.8rem; display: flex; align-items: center;">
+						<span style="color: #ffb300; margin-right: 0.5rem;">✓</span>
+						Accompagnement personnalisé
+					</li>
+					<li style="color: #3949ab; margin-bottom: 0.8rem; display: flex; align-items: center;">
+						<span style="color: #ffb300; margin-right: 0.5rem;">✓</span>
+						Suivi régulier
+					</li>
+					<li style="color: #3949ab; display: flex; align-items: center;">
+						<span style="color: #ffb300; margin-right: 0.5rem;">✓</span>
+						Évaluation des performances
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
 
-        <div>
-          <h2 class="text-3xl font-bold mb-8">Intégration professionnelle</h2>
-          <div class="bg-white p-8 rounded-lg shadow-md">
-            <div class="flex items-center mb-6">
-              <div class="bg-indigo-100 p-3 rounded-lg mr-4">
-                <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
-              </div>
-              <h3 class="text-2xl font-semibold">Notre accompagnement</h3>
-            </div>
-            <p class="text-gray-600 mb-6">
-              Nous assurons un suivi personnalisé pour une intégration réussie dans l'entreprise.
-            </p>
-            <div class="space-y-4">
-              <div class="flex items-start">
-                <div class="bg-indigo-100 p-2 rounded-full mr-4">
-                  <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <div>
-                  <h4 class="font-semibold mb-2">Préparation à l'intégration</h4>
-                  <p class="text-gray-600">Formation aux codes de l'entreprise et à la culture d'entreprise.</p>
-                </div>
-              </div>
-              <div class="flex items-start">
-                <div class="bg-indigo-100 p-2 rounded-full mr-4">
-                  <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <div>
-                  <h4 class="font-semibold mb-2">Suivi post-embauche</h4>
-                  <p class="text-gray-600">Accompagnement continu pour assurer une intégration réussie.</p>
-                </div>
-              </div>
-              <div class="flex items-start">
-                <div class="bg-indigo-100 p-2 rounded-full mr-4">
-                  <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <div>
-                  <h4 class="font-semibold mb-2">Évaluation et ajustement</h4>
-                  <p class="text-gray-600">Suivi régulier et ajustements si nécessaire pour garantir le succès.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+	<section data-animate style="background: #fffde7; padding: 3rem 1rem; text-align: center;">
+		<div style="max-width: 800px; margin: 0 auto;">
+			<h2 style="color: #1a237e; font-size: 1.8rem; font-weight: 800; margin-bottom: 1.5rem;">Pourquoi nous choisir ?</h2>
+			<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem;">
+				<div>
+					<h3 style="color: #1a237e; font-size: 1.2rem; font-weight: 700; margin-bottom: 1rem;">Expertise</h3>
+					<p style="color: #3949ab;">Une équipe experte dans l'accompagnement des PME et la formation des jeunes talents.</p>
+				</div>
+				<div>
+					<h3 style="color: #1a237e; font-size: 1.2rem; font-weight: 700; margin-bottom: 1rem;">Personnalisation</h3>
+					<p style="color: #3949ab;">Des solutions adaptées aux besoins spécifiques de chaque PME et chaque jeune talent.</p>
+				</div>
+				<div>
+					<h3 style="color: #1a237e; font-size: 1.2rem; font-weight: 700; margin-bottom: 1rem;">Suivi</h3>
+					<p style="color: #3949ab;">Un accompagnement continu pour garantir la réussite de l'intégration.</p>
+				</div>
+			</div>
+		</div>
+	</section>
 
-  <section class="bg-indigo-50 py-16">
-    <div class="container mx-auto px-4">
-      <div class="max-w-4xl mx-auto text-center">
-        <h2 class="text-3xl font-bold mb-8">Prêt à commencer ?</h2>
-        <p class="text-xl text-gray-600 mb-8">
-          Découvrez comment nos services peuvent vous aider à atteindre vos objectifs.
-        </p>
-        <a
-          href="/contact"
-          class="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-500 transition-colors"
-        >
-          Contactez-nous
-        </a>
-      </div>
-    </div>
-  </section>
+	<section data-animate style="max-width: 1200px; margin: 0 auto; padding: 3rem 1rem; text-align: center;">
+		<h2 style="color: #1a237e; font-size: 1.8rem; font-weight: 800; margin-bottom: 1.5rem;">Prêt à commencer ?</h2>
+		<p style="color: #3949ab; max-width: 600px; margin: 0 auto 2rem auto;">Que vous soyez une PME ou un jeune talent, nous sommes là pour vous accompagner dans votre développement.</p>
+		<div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+			<a href="/contact" style="background: #1a237e; color: #fff; font-weight: 600; padding: 1rem 2rem; border-radius: 0.5rem; text-decoration: none; transition: background 0.2s;">Je suis une PME</a>
+			<a href="/contact" style="background: #fff; color: #1a237e; font-weight: 600; padding: 1rem 2rem; border-radius: 0.5rem; text-decoration: none; border: 2px solid #1a237e; transition: background 0.2s;">Je suis un jeune talent</a>
+		</div>
+	</section>
 </Layout>
 
 <style>
-.page-section {
-  background: #f5f5f5;
-  padding: 4rem 0;
-}
-.titre-section {
-  color: #1a237e;
-  font-size: 2.5rem;
-  font-weight: 800;
-  text-align: center;
-  margin-bottom: 2rem;
-  position: relative;
-}
-.titre-section::after {
-  content: '';
-  display: block;
-  width: 80px;
-  height: 4px;
-  background: linear-gradient(90deg, #ffb300 0%, #3949ab 100%);
-  margin: 1rem auto 0 auto;
-  border-radius: 2px;
-}
-.card-service {
-  background: #fff;
-  border-radius: 1.5rem;
-  box-shadow: 0 4px 32px #1a237e22;
-  padding: 2rem;
-  transition: transform 0.2s, box-shadow 0.2s;
-  border: 1px solid #e0e7ef;
-}
-.card-service:hover {
-  transform: translateY(-6px) scale(1.03);
-  box-shadow: 0 8px 40px #1a237e33;
-}
-.card-service svg {
-  color: #ffb300;
-  background: #f5f5f5;
-  border-radius: 50%;
-  padding: 0.5rem;
-  margin-bottom: 1rem;
-}
-.btn-premium {
-  display: inline-block;
-  background: linear-gradient(90deg, #1a237e 0%, #3949ab 100%);
-  color: #fff;
-  font-weight: 700;
-  border-radius: 2rem;
-  padding: 1rem 2.5rem;
-  box-shadow: 0 4px 24px #1a237e33;
-  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
-  margin-top: 2rem;
-}
-.btn-premium:hover {
-  background: linear-gradient(90deg, #ffb300 0%, #1a237e 100%);
-  color: #1a237e;
-  transform: translateY(-3px) scale(1.04);
-  box-shadow: 0 8px 32px #ffb30055;
-}
-@media (max-width: 1024px) {
-  .page-section {
-    padding: 2rem 1rem;
-  }
-  .titre-section {
-    font-size: 1.7rem;
-  }
+a:hover {
+	background: #3949ab !important;
+	color: #fff !important;
 }
 @media (max-width: 768px) {
-  .page-section {
-    padding: 1.5rem 0.5rem;
-  }
-  .titre-section {
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-  }
-  .grid.md\:grid-cols-2, .grid.md\:grid-cols-3 {
-    grid-template-columns: 1fr !important;
-    gap: 1.2rem;
-  }
-  .card-service {
-    padding: 1rem !important;
-    margin-bottom: 1.2rem;
-    text-align: center;
-  }
-  .card-service svg {
-    margin: 0 auto 1rem auto;
-    display: block;
-  }
-  .btn-premium {
-    width: 100%;
-    font-size: 1rem;
-    padding: 0.8rem 1.2rem;
-    margin-top: 1rem;
-  }
-}
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+	section {
+		padding: 2rem 1rem !important;
+	}
+	h1 {
+		font-size: 2rem !important;
+	}
+	h2 {
+		font-size: 1.5rem !important;
+	}
 }
 </style> 
