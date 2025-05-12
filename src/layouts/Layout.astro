@@ -14,6 +14,16 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<meta name="description" content="Horizon Impact : solutions web sur-mesure, accompagnement humain, résultats concrets. Agence digitale à impact positif." />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content="Horizon Impact : solutions web sur-mesure, accompagnement humain, résultats concrets. Agence digitale à impact positif." />
+		<meta property="og:type" content="website" />
+		<meta property="og:image" content="/logo.png" />
+		<meta property="og:locale" content="fr_FR" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content="Horizon Impact : solutions web sur-mesure, accompagnement humain, résultats concrets. Agence digitale à impact positif." />
+		<meta name="twitter:image" content="/logo.png" />
 	</head>
 	<body class="min-h-screen bg-gray-50">
 		<header class="bg-white text-[#1a237e] border-b border-[#3949ab] shadow-lg">
@@ -26,6 +36,7 @@ const { title } = Astro.props;
 					<div class="hidden md:flex space-x-6">
 						<a href="/" class="hover:text-[#ffb300] text-[#1a237e] font-semibold transition-colors">Accueil</a>
 						<a href="/services" class="hover:text-[#ffb300] text-[#1a237e] font-semibold transition-colors">Nos Services</a>
+						<a href="/a-propos" class="hover:text-[#ffb300] text-[#1a237e] font-semibold transition-colors">À propos</a>
 						<!-- <a href="/partenaires" class="hover:text-indigo-200">Nos Partenaires</a> -->
 						<a href="/contact" class="hover:text-[#ffb300] text-[#1a237e] font-semibold transition-colors">Contact</a>
 					</div>
@@ -155,92 +166,218 @@ const { title } = Astro.props;
 		max-width: 100vw;
 		overflow-x: hidden;
 		box-sizing: border-box;
+		font-family: 'Inter', 'Roboto', Arial, sans-serif;
+		background: #f5f5f5;
 	}
 	* {
 		box-sizing: border-box;
 		margin: 0;
 		padding: 0;
 	}
-	body {
-		font-family: 'Inter', 'Roboto', Arial, sans-serif;
+	header {
+		position: sticky;
+		top: 0;
+		z-index: 50;
+		background: #fff;
+		border-bottom: 1.5px solid #e0e7ef;
+		box-shadow: 0 2px 12px #1a237e11;
+	}
+	.navbar {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0.7rem 1.2rem;
+	}
+	.logo-title {
+		display: flex;
+		align-items: center;
+		gap: 0.7rem;
+		font-size: 1.5rem;
+		font-weight: 800;
+		color: #1a237e;
+		letter-spacing: 0.5px;
+	}
+	.logo-title img {
+		height: 2.5rem;
+		width: auto;
+		border-radius: 0.7rem;
+		background: #f5f5f5;
+		box-shadow: 0 2px 8px #1a237e22;
+		padding: 0.2rem;
+	}
+	.nav-links {
+		display: flex;
+		gap: 2rem;
+	}
+	.nav-link {
+		color: #1a237e;
+		font-weight: 600;
+		text-decoration: none;
+		transition: color 0.2s;
+		font-size: 1.1rem;
+	}
+	.nav-link:hover {
+		color: #3949ab;
+	}
+	.menu-toggle {
+		display: none;
+		background: none;
+		border: none;
+		font-size: 2rem;
+		color: #1a237e;
+		cursor: pointer;
+	}
+	@media (max-width: 900px) {
+		.navbar {
+			padding: 0.7rem 0.7rem;
+		}
+		.nav-links {
+			gap: 1.2rem;
+		}
+		.logo-title {
+			font-size: 1.1rem;
+		}
+	}
+	@media (max-width: 700px) {
+		.navbar {
+			flex-direction: row;
+			padding: 0.7rem 0.5rem;
+		}
+		.nav-links {
+			display: none;
+			position: absolute;
+			top: 60px;
+			left: 0;
+			width: 100vw;
+			background: #fff;
+			flex-direction: column;
+			gap: 0.7rem;
+			box-shadow: 0 8px 32px #1a237e22;
+			padding: 1.2rem 0;
+			z-index: 100;
+		}
+		.nav-links.open {
+			display: flex;
+		}
+		.menu-toggle {
+			display: block;
+		}
+	}
+	main {
+		min-height: 70vh;
+		width: 100%;
 		background: #f5f5f5;
 	}
-	header, footer, main, section, .container {
-		width: 100%;
-		box-sizing: border-box;
+	footer {
+		background: #1a237e;
+		color: #fff;
+		padding: 2.5rem 1rem 1.2rem 1rem;
+		border-top-left-radius: 2.5rem;
+		border-top-right-radius: 2.5rem;
+		box-shadow: 0 -2px 16px #1a237e22;
+		margin-top: 3rem;
 	}
-	img, svg {
-		max-width: 100%;
-		height: auto;
-		display: block;
+	.footer-content {
+		max-width: 1200px;
+		margin: 0 auto;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 2rem;
+		justify-content: space-between;
+		align-items: flex-start;
 	}
-	@media (max-width: 768px) {
-		header nav, .container, section, main, footer {
-			padding-left: 0.5rem !important;
-			padding-right: 0.5rem !important;
-		}
-		.flex, .grid {
-			flex-direction: column !important;
-			align-items: center !important;
-			justify-content: center !important;
-			gap: 1rem !important;
-		}
-		h1, h2, h3, h4, h5, h6, .titre-bluffant, .titre-section {
-			text-align: center !important;
-			font-size: 1.2rem !important;
-			margin-bottom: 0.8rem !important;
-		}
-		p, .sous-titre-bluffant {
-			text-align: center !important;
-			font-size: 1rem !important;
-			margin-bottom: 0.7rem !important;
-		}
-		.btn-bluffant, .btn-premium, button, input[type=submit] {
-			width: 100% !important;
-			font-size: 1rem !important;
-			padding: 0.8rem 1.2rem !important;
-			margin: 0.3rem 0 !important;
-			border-radius: 1.2rem !important;
-		}
-		.card-service, .bg-white.p-6.rounded-lg.shadow-md, .bg-white.p-8.rounded-lg.shadow-md {
-			padding: 1rem !important;
-			margin-bottom: 1.2rem !important;
-			border-radius: 1.2rem !important;
-			text-align: center !important;
-		}
-		.flex.space-x-4, .flex.space-x-6 {
-			flex-direction: row !important;
-			justify-content: center !important;
-			gap: 1rem !important;
-		}
-		footer .grid {
-			grid-template-columns: 1fr !important;
-			gap: 1.5rem !important;
-		}
-		.h-12.w-auto, .h-10.w-auto {
-			height: 2.2rem !important;
-		}
+	.footer-block {
+		flex: 1 1 200px;
+		min-width: 180px;
+		margin-bottom: 1.2rem;
 	}
-	@media (max-width: 1024px) {
-		header nav {
-			padding: 0.7rem 1rem;
+	.footer-block h3 {
+		font-size: 1.1rem;
+		font-weight: 700;
+		margin-bottom: 0.7rem;
+		color: #ffb300;
+	}
+	.footer-block p, .footer-block a {
+		color: #e0e7ef;
+		font-size: 1rem;
+		margin-bottom: 0.5rem;
+		text-decoration: none;
+	}
+	.footer-block a:hover {
+		color: #ffb300;
+	}
+	.footer-socials {
+		display: flex;
+		gap: 1.2rem;
+		margin-top: 0.7rem;
+	}
+	.footer-socials a {
+		color: #fff;
+		font-size: 1.5rem;
+		transition: color 0.2s;
+	}
+	.footer-socials a:hover {
+		color: #ffb300;
+	}
+	.footer-bottom {
+		text-align: center;
+		color: #e0e7ef;
+		font-size: 0.95rem;
+		margin-top: 2rem;
+	}
+	@media (max-width: 900px) {
+		.footer-content {
+			flex-direction: column;
+			gap: 1.5rem;
+			align-items: center;
 		}
-		.flex.items-center.space-x-2.text-2xl {
-			font-size: 1.3rem;
-		}
-		.h-12.w-auto {
-			height: 2.5rem;
+		.footer-block {
+			min-width: 0;
+			width: 100%;
+			text-align: center;
 		}
 	}
-	@media (min-width: 1280px) {
-		.container {
-			max-width: 1200px;
-			margin-left: auto;
-			margin-right: auto;
-		}
-		header nav {
-			padding-left: 2.5rem;
-			padding-right: 2.5rem;
-		}
+	.fade-in-up {
+		opacity: 0;
+		transform: translateY(40px);
+		transition: opacity 0.8s cubic-bezier(.4,0,.2,1), transform 0.8s cubic-bezier(.4,0,.2,1);
+	}
+	.fade-in-up.visible {
+		opacity: 1;
+		transform: none;
+	}
+	.menu-toggle.animate {
+		transition: transform 0.3s cubic-bezier(.4,0,.2,1);
+		transform: rotate(90deg);
 	}
 </style>
+
+<script>
+	const toggle = document.getElementById('menu-toggle');
+	const links = document.getElementById('nav-links');
+	toggle.addEventListener('click', () => {
+		links.classList.toggle('open');
+		toggle.classList.toggle('animate');
+	});
+
+	// Animation d'apparition douce des sections
+	function revealOnScroll() {
+		const elements = document.querySelectorAll('main section, main div[data-animate]');
+		const windowHeight = window.innerHeight;
+		elements.forEach(el => {
+			const rect = el.getBoundingClientRect();
+			if (rect.top < windowHeight - 60) {
+				el.classList.add('visible');
+			}
+		});
+	}
+	document.addEventListener('DOMContentLoaded', () => {
+		document.querySelectorAll('main section, main div[data-animate]').forEach(el => {
+			el.classList.add('fade-in-up');
+		});
+		revealOnScroll();
+		window.addEventListener('scroll', revealOnScroll);
+	});
+</script>
