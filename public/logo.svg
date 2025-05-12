@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="150" height="40" viewBox="0 0 150 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Icône -->
-  <path d="M20 8C13.3726 8 8 13.3726 8 20C8 26.6274 13.3726 32 20 32C26.6274 32 32 26.6274 32 20C32 13.3726 26.6274 8 20 8ZM20 30C14.4772 30 10 25.5228 10 20C10 14.4772 14.4772 10 20 10C25.5228 10 30 14.4772 30 20C30 25.5228 25.5228 30 20 30Z" fill="#1A237E"/>
-  <path d="M20 12C15.5817 12 12 15.5817 12 20C12 24.4183 15.5817 28 20 28C24.4183 28 28 24.4183 28 20C28 15.5817 24.4183 12 20 12ZM20 26C16.6863 26 14 23.3137 14 20C14 16.6863 16.6863 14 20 14C23.3137 14 26 16.6863 26 20C26 23.3137 23.3137 26 20 26Z" fill="#3949AB"/>
-  <path d="M20 16C17.7909 16 16 17.7909 16 20C16 22.2091 17.7909 24 20 24C22.2091 24 24 22.2091 24 20C24 17.7909 22.2091 16 20 16Z" fill="#6F74DD"/>
-  
-  <!-- Texte -->
-  <path d="M45 12H48.5L52 20L55.5 12H59L53.5 24H50.5L45 12Z" fill="#1A237E"/>
-  <path d="M61 12H64V24H61V12Z" fill="#1A237E"/>
-  <path d="M67 12H70V21H77V24H67V12Z" fill="#1A237E"/>
-  <path d="M80 12H83V24H80V12Z" fill="#1A237E"/>
-  <path d="M86 12H89V21H96V24H86V12Z" fill="#1A237E"/>
-  <path d="M99 12H102V24H99V12Z" fill="#1A237E"/>
-  <path d="M105 12H108V21H115V24H105V12Z" fill="#1A237E"/>
-  <path d="M118 12H121V24H118V12Z" fill="#1A237E"/>
-  <path d="M124 12H127V21H134V24H124V12Z" fill="#1A237E"/>
-  <path d="M137 12H140V24H137V12Z" fill="#1A237E"/>
+<svg width="300" height="50" viewBox="0 0 300 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .logo-text {
+      font-family: 'Arial', sans-serif;
+      font-weight: 800;
+      font-size: 24px;
+      fill: #1a237e;
+    }
+    .logo-accent {
+      fill: #3949ab;
+    }
+  </style>
+  <text x="10" y="35" class="logo-text">
+    <tspan class="logo-accent">HORIZON</tspan>
+    <tspan> D'</tspan>
+    <tspan class="logo-accent">IMPACT</tspan>
+    <tspan> 3.0</tspan>
+  </text>
 </svg> 

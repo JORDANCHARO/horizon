@@ -307,17 +307,26 @@ const { title, description = "Horizon D'Impact 3.0 - Votre partenaire pour la ge
 			}
 
 			.logo {
-				display: block;
-				transition: var(--transition);
+				display: flex;
+				align-items: center;
+				text-decoration: none;
+				transition: opacity 0.3s ease;
 			}
 
 			.logo:hover {
-				transform: scale(1.05);
+				opacity: 0.9;
 			}
 
 			.logo img {
-				display: block;
-				height: auto;
+				height: 40px;
+				width: auto;
+				object-fit: contain;
+			}
+
+			@media (max-width: 768px) {
+				.logo img {
+					height: 32px;
+				}
 			}
 
 			/* Navigation */
