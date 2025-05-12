@@ -29,7 +29,7 @@ const { title } = Astro.props;
 		<header style="position: fixed; top: 0; left: 0; right: 0; background: #fff; box-shadow: 0 2px 8px #1a237e11; z-index: 1000; padding: 1rem;">
 			<nav style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 1rem;">
 				<a href="/" style="display: flex; align-items: center; gap: 0.7rem; text-decoration: none;">
-					<img src="/logos/logo.png" alt="Logo Horizon D'Impact 3.0" style="height: 2.5rem; width: auto; border-radius: 0.7rem; background: #f5f5f5; box-shadow: 0 2px 8px #1a237e22; padding: 0.2rem;" />
+					<img src="/logos/logo.png" alt="Logo Horizon D'Impact 3.0" class="logo-img" style="height: 2.5rem; width: auto; border-radius: 0.7rem; background: #f5f5f5; box-shadow: 0 2px 8px #1a237e22; padding: 0.2rem;" />
 					<span style="color: #1a237e; font-weight: 800; font-size: 1.5rem;">Horizon D'Impact 3.0</span>
 				</a>
 				
@@ -197,6 +197,9 @@ const { title } = Astro.props;
 		}
 		#mobileNav.active {
 			display: block;
+		}
+		.logo-img {
+			display: none !important;
 		}
 	}
 
