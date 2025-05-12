@@ -10,11 +10,16 @@
     .logo-accent {
       fill: #3949ab;
     }
+    .version {
+      font-size: 28px;
+      font-weight: 900;
+      fill: #6F74DD;
+    }
   </style>
   <text x="10" y="35" class="logo-text">
     <tspan class="logo-accent">HORIZON</tspan>
     <tspan> D'</tspan>
     <tspan class="logo-accent">IMPACT</tspan>
-    <tspan> 3.0</tspan>
+    <tspan class="version"> 3.0</tspan>
   </text>
 </svg> 
