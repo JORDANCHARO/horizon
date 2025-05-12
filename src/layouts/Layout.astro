@@ -10,7 +10,7 @@ const { title } = Astro.props;
 <html lang="fr">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
@@ -24,17 +24,19 @@ const { title } = Astro.props;
 		<meta name="twitter:title" content={title} />
 		<meta name="twitter:description" content="Horizon Impact : solutions web sur-mesure, accompagnement humain, résultats concrets. Agence digitale à impact positif." />
 		<meta name="twitter:image" content="/logo.png" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 	</head>
-	<body class="min-h-screen bg-gray-50">
-		<header style="position: fixed; top: 0; left: 0; right: 0; background: #fff; box-shadow: 0 2px 8px #1a237e11; z-index: 1000; padding: 1rem;">
-			<nav style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 1rem;">
-				<a href="/" style="display: flex; align-items: center; gap: 0.7rem; text-decoration: none;">
-					<img src="/logos/logo.png" alt="Logo Horizon D'Impact 3.0" class="logo-img" style="height: 2.5rem; width: auto; border-radius: 0.7rem; background: #f5f5f5; box-shadow: 0 2px 8px #1a237e22; padding: 0.2rem;" />
-					<span style="color: #1a237e; font-weight: 800; font-size: 1.5rem;">Horizon D'Impact 3.0</span>
+	<body>
+		<header class="header">
+			<nav class="nav-container">
+				<a href="/" class="logo-link">
+					<img src="/logos/logo.png" alt="Logo Horizon D'Impact 3.0" class="logo-img" />
+					<span class="logo-text">Horizon D'Impact 3.0</span>
 				</a>
 				
-				<!-- Menu Hamburger pour Mobile -->
-				<button id="menuButton" style="display: none; background: none; border: none; cursor: pointer; padding: 0.5rem;">
+				<button id="menuButton" class="menu-button" aria-label="Menu">
 					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
 						<line x1="3" y1="12" x2="21" y2="12"></line>
 						<line x1="3" y1="6" x2="21" y2="6"></line>
@@ -42,57 +44,55 @@ const { title } = Astro.props;
 					</svg>
 				</button>
 
-				<!-- Navigation Desktop -->
-				<div id="desktopNav" style="display: flex; gap: 2rem;">
-					<a href="/" style="color: #1a237e; text-decoration: none; font-weight: 500;">Accueil</a>
-					<a href="/services" style="color: #1a237e; text-decoration: none; font-weight: 500;">Services</a>
-					<a href="/a-propos" style="color: #1a237e; text-decoration: none; font-weight: 500;">À propos</a>
-					<a href="/contact" style="color: #1a237e; text-decoration: none; font-weight: 500;">Contact</a>
+				<div id="desktopNav" class="desktop-nav">
+					<a href="/" class="nav-link">Accueil</a>
+					<a href="/services" class="nav-link">Services</a>
+					<a href="/a-propos" class="nav-link">À propos</a>
+					<a href="/contact" class="nav-link">Contact</a>
 				</div>
 
-				<!-- Navigation Mobile -->
-				<div id="mobileNav" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #fff; padding: 5rem 2rem 2rem 2rem; z-index: 999;">
-					<button id="closeMenu" style="position: absolute; top: 1rem; right: 1rem; background: none; border: none; cursor: pointer; padding: 0.5rem;">
+				<div id="mobileNav" class="mobile-nav">
+					<button id="closeMenu" class="close-button" aria-label="Fermer le menu">
 						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
 							<line x1="18" y1="6" x2="6" y2="18"></line>
 							<line x1="6" y1="6" x2="18" y2="18"></line>
 						</svg>
 					</button>
-					<div style="display: flex; flex-direction: column; gap: 1.5rem;">
-						<a href="/" style="color: #1a237e; text-decoration: none; font-weight: 500; font-size: 1.2rem;">Accueil</a>
-						<a href="/services" style="color: #1a237e; text-decoration: none; font-weight: 500; font-size: 1.2rem;">Services</a>
-						<a href="/a-propos" style="color: #1a237e; text-decoration: none; font-weight: 500; font-size: 1.2rem;">À propos</a>
-						<a href="/contact" style="color: #1a237e; text-decoration: none; font-weight: 500; font-size: 1.2rem;">Contact</a>
+					<div class="mobile-nav-links">
+						<a href="/" class="mobile-nav-link">Accueil</a>
+						<a href="/services" class="mobile-nav-link">Services</a>
+						<a href="/a-propos" class="mobile-nav-link">À propos</a>
+						<a href="/contact" class="mobile-nav-link">Contact</a>
 					</div>
 				</div>
 			</nav>
 		</header>
 
-		<main style="margin-top: 4rem;">
+		<main class="main-content">
 			<slot />
 		</main>
 
-		<footer style="background: #1a237e; color: #fff; padding: 3rem 1rem;">
-			<div style="max-width: 1200px; margin: 0 auto;">
-				<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
-					<div>
-						<h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 1rem;">Horizon Impact</h3>
-						<p style="color: #e0e0e0;">Accompagnement des PME et formation des jeunes talents.</p>
+		<footer class="footer">
+			<div class="footer-container">
+				<div class="footer-grid">
+					<div class="footer-section">
+						<h3 class="footer-title">Horizon Impact</h3>
+						<p class="footer-text">Accompagnement des PME et formation des jeunes talents.</p>
 					</div>
-					<div>
-						<h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 1rem;">Navigation</h3>
-						<div style="display: flex; flex-direction: column; gap: 0.5rem;">
-							<a href="/" style="color: #e0e0e0; text-decoration: none;">Accueil</a>
-							<a href="/services" style="color: #e0e0e0; text-decoration: none;">Services</a>
-							<a href="/a-propos" style="color: #e0e0e0; text-decoration: none;">À propos</a>
-							<a href="/contact" style="color: #e0e0e0; text-decoration: none;">Contact</a>
+					<div class="footer-section">
+						<h3 class="footer-title">Navigation</h3>
+						<div class="footer-links">
+							<a href="/" class="footer-link">Accueil</a>
+							<a href="/services" class="footer-link">Services</a>
+							<a href="/a-propos" class="footer-link">À propos</a>
+							<a href="/contact" class="footer-link">Contact</a>
 						</div>
 					</div>
-					<div>
-						<h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 1rem;">Contact</h3>
-						<p style="color: #e0e0e0;">Email: horizon.dimpact.3.0@gmail.com</p>
-						<p style="color: #e0e0e0;">Tél: +237 6 99 94 20 02</p>
-						<div style="margin-top: 1rem;">
+					<div class="footer-section">
+						<h3 class="footer-title">Contact</h3>
+						<p class="footer-text">Email: horizon.dimpact.3.0@gmail.com</p>
+						<p class="footer-text">Tél: +237 6 99 94 20 02</p>
+						<div class="map-container">
 							<iframe 
 								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.7536223150963!2d9.7053!3d4.0516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNMKwMDMnMDUuOCJOIDnCsDQyJzE5LjEiRQ!5e0!3m2!1sfr!2scm!4v1635000000000!5m2!1sfr!2scm" 
 								width="100%" 
@@ -104,8 +104,8 @@ const { title } = Astro.props;
 						</div>
 					</div>
 				</div>
-				<div style="text-align: center; padding-top: 2rem; border-top: 1px solid #3949ab;">
-					<p style="color: #e0e0e0;">© 2024 Horizon Impact. Tous droits réservés.</p>
+				<div class="footer-bottom">
+					<p class="footer-copyright">© 2024 Horizon Impact. Tous droits réservés.</p>
 				</div>
 			</div>
 		</footer>
@@ -119,17 +119,14 @@ const { title } = Astro.props;
 	const mobileNav = document.getElementById('mobileNav');
 	const desktopNav = document.getElementById('desktopNav');
 
-	// Fonction pour gérer l'affichage du menu
 	function toggleMenu() {
-		mobileNav.style.display = mobileNav.style.display === 'none' ? 'block' : 'none';
-		document.body.style.overflow = mobileNav.style.display === 'block' ? 'hidden' : '';
+		mobileNav.classList.toggle('active');
+		document.body.classList.toggle('menu-open');
 	}
 
-	// Événements pour le menu
 	menuButton?.addEventListener('click', toggleMenu);
 	closeMenu?.addEventListener('click', toggleMenu);
 
-	// Gestion du responsive
 	function handleResize() {
 		if (window.innerWidth <= 768) {
 			menuButton.style.display = 'block';
@@ -137,12 +134,11 @@ const { title } = Astro.props;
 		} else {
 			menuButton.style.display = 'none';
 			desktopNav.style.display = 'flex';
-			mobileNav.style.display = 'none';
-			document.body.style.overflow = '';
+			mobileNav.classList.remove('active');
+			document.body.classList.remove('menu-open');
 		}
 	}
 
-	// Initialisation et écoute du redimensionnement
 	handleResize();
 	window.addEventListener('resize', handleResize);
 
@@ -150,8 +146,7 @@ const { title } = Astro.props;
 	const observer = new IntersectionObserver((entries) => {
 		entries.forEach(entry => {
 			if (entry.isIntersecting) {
-				entry.target.style.opacity = '1';
-				entry.target.style.transform = 'translateY(0)';
+				entry.target.classList.add('animate-in');
 			}
 		});
 	}, {
@@ -159,15 +154,12 @@ const { title } = Astro.props;
 	});
 
 	document.querySelectorAll('[data-animate]').forEach((element) => {
-		element.style.opacity = '0';
-		element.style.transform = 'translateY(20px)';
-		element.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+		element.classList.add('animate-element');
 		observer.observe(element);
 	});
 </script>
 
 <style>
-	/* Styles globaux */
 	:root {
 		--primary: #1a237e;
 		--secondary: #3949ab;
@@ -175,47 +167,242 @@ const { title } = Astro.props;
 		--text: #333;
 		--light: #fff;
 		--gray: #e0e0e0;
+		--header-height: 4rem;
+		--transition: all 0.3s ease;
+	}
+
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
 	}
 
 	body {
-		margin: 0;
-		font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+		font-family: 'Inter', system-ui, -apple-system, sans-serif;
 		line-height: 1.5;
 		color: var(--text);
+		background-color: var(--light);
 	}
 
-	/* Styles du menu mobile */
+	/* Header & Navigation */
+	.header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		background: var(--light);
+		box-shadow: 0 2px 8px rgba(26, 35, 126, 0.1);
+		z-index: 1000;
+		height: var(--header-height);
+	}
+
+	.nav-container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 1rem;
+		height: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.logo-link {
+		display: flex;
+		align-items: center;
+		gap: 0.7rem;
+		text-decoration: none;
+	}
+
+	.logo-img {
+		height: 2.5rem;
+		width: auto;
+		border-radius: 0.7rem;
+		background: #f5f5f5;
+		box-shadow: 0 2px 8px rgba(26, 35, 126, 0.2);
+		padding: 0.2rem;
+	}
+
+	.logo-text {
+		color: var(--primary);
+		font-weight: 800;
+		font-size: 1.5rem;
+	}
+
+	.menu-button {
+		display: none;
+		background: none;
+		border: none;
+		cursor: pointer;
+		padding: 0.5rem;
+		color: var(--primary);
+	}
+
+	.desktop-nav {
+		display: flex;
+		gap: 2rem;
+	}
+
+	.nav-link {
+		color: var(--primary);
+		text-decoration: none;
+		font-weight: 500;
+		transition: var(--transition);
+	}
+
+	.nav-link:hover {
+		color: var(--accent);
+	}
+
+	.mobile-nav {
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: var(--light);
+		padding: 5rem 2rem 2rem;
+		z-index: 999;
+		transform: translateX(100%);
+		transition: var(--transition);
+	}
+
+	.mobile-nav.active {
+		transform: translateX(0);
+	}
+
+	.close-button {
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+		background: none;
+		border: none;
+		cursor: pointer;
+		padding: 0.5rem;
+		color: var(--primary);
+	}
+
+	.mobile-nav-links {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	.mobile-nav-link {
+		color: var(--primary);
+		text-decoration: none;
+		font-weight: 500;
+		font-size: 1.2rem;
+		transition: var(--transition);
+	}
+
+	.mobile-nav-link:hover {
+		color: var(--accent);
+	}
+
+	/* Main Content */
+	.main-content {
+		margin-top: var(--header-height);
+		min-height: calc(100vh - var(--header-height));
+	}
+
+	/* Footer */
+	.footer {
+		background: var(--primary);
+		color: var(--light);
+		padding: 3rem 1rem;
+	}
+
+	.footer-container {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	.footer-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+		margin-bottom: 2rem;
+	}
+
+	.footer-title {
+		font-size: 1.2rem;
+		font-weight: 700;
+		margin-bottom: 1rem;
+	}
+
+	.footer-text {
+		color: var(--gray);
+	}
+
+	.footer-links {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+
+	.footer-link {
+		color: var(--gray);
+		text-decoration: none;
+		transition: var(--transition);
+	}
+
+	.footer-link:hover {
+		color: var(--accent);
+	}
+
+	.map-container {
+		margin-top: 1rem;
+	}
+
+	.footer-bottom {
+		text-align: center;
+		padding-top: 2rem;
+		border-top: 1px solid var(--secondary);
+	}
+
+	.footer-copyright {
+		color: var(--gray);
+	}
+
+	/* Animations */
+	.animate-element {
+		opacity: 0;
+		transform: translateY(20px);
+		transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+	}
+
+	.animate-element.animate-in {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	/* Responsive Design */
 	@media (max-width: 768px) {
-		#menuButton {
-			display: block !important;
-		}
-		#desktopNav {
-			display: none !important;
-		}
-		#mobileNav {
-			display: none;
-		}
-		#mobileNav.active {
+		.menu-button {
 			display: block;
 		}
-		.logo-img {
-			display: none !important;
+
+		.desktop-nav {
+			display: none;
+		}
+
+		.mobile-nav {
+			display: block;
+		}
+
+		.logo-text {
+			display: none;
+		}
+
+		body.menu-open {
+			overflow: hidden;
 		}
 	}
 
-	/* Styles des liens */
-	a {
-		transition: color 0.2s;
-	}
-	a:hover {
-		color: var(--accent) !important;
-	}
-
-	/* Styles des boutons */
-	button {
-		transition: opacity 0.2s;
-	}
-	button:hover {
-		opacity: 0.8;
+	@media (max-width: 480px) {
+		.footer-grid {
+			grid-template-columns: 1fr;
+		}
 	}
 </style>

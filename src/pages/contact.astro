@@ -3,89 +3,334 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Horizon D'Impact 3.0 - Contact">
-	<section data-animate style="background: linear-gradient(120deg, #1a237e 60%, #3949ab 100%); color: #fff; padding: 3.5rem 1rem 2.5rem 1rem; text-align: center;">
-		<h1 style="font-size: 2.3rem; font-weight: 800; margin-bottom: 1.2rem; letter-spacing: 0.5px;">Contactez-nous</h1>
-		<p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto 2rem auto;">Que vous soyez une PME ou un jeune talent, nous sommes là pour vous accompagner.</p>
+	<section class="hero" data-animate>
+		<div class="hero-content">
+			<h1 class="hero-title">Contactez-nous</h1>
+			<p class="hero-subtitle">Nous sommes là pour vous accompagner dans votre développement professionnel.</p>
+		</div>
+		<div class="hero-decoration"></div>
 	</section>
 
-	<section data-animate style="max-width: 1200px; margin: 0 auto; padding: 2.5rem 1rem;">
-		<div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
-			<!-- Formulaire PME -->
-			<div style="background: #fff; border-radius: 1.5rem; box-shadow: 0 2px 12px #1a237e11; flex: 1 1 500px; min-width: 300px; max-width: 600px; padding: 2rem;">
-				<h2 style="color: #1a237e; font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem; text-align: center;">Je suis une PME</h2>
-				<form style="display: flex; flex-direction: column; gap: 1.2rem;">
-					<div>
-						<label for="pme-nom" style="display: block; color: #1a237e; font-weight: 600; margin-bottom: 0.5rem;">Nom de l'entreprise *</label>
-						<input type="text" id="pme-nom" name="pme-nom" required style="width: 100%; padding: 0.8rem; border: 2px solid #e0e0e0; border-radius: 0.5rem; font-size: 1rem; transition: border-color 0.2s;" />
+	<section class="contact" data-animate>
+		<div class="contact-container">
+			<div class="contact-info">
+				<h2 class="section-title">Nos coordonnées</h2>
+				<div class="info-grid">
+					<div class="info-card">
+						<div class="info-icon">
+							<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+							</svg>
+						</div>
+						<h3 class="info-title">Téléphone</h3>
+						<p class="info-text">+33 1 23 45 67 89</p>
 					</div>
-					<div>
-						<label for="pme-contact" style="display: block; color: #1a237e; font-weight: 600; margin-bottom: 0.5rem;">Nom du contact *</label>
-						<input type="text" id="pme-contact" name="pme-contact" required style="width: 100%; padding: 0.8rem; border: 2px solid #e0e0e0; border-radius: 0.5rem; font-size: 1rem; transition: border-color 0.2s;" />
+
+					<div class="info-card">
+						<div class="info-icon">
+							<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+							</svg>
+						</div>
+						<h3 class="info-title">Email</h3>
+						<p class="info-text">contact@horizon-impact.fr</p>
 					</div>
-					<div>
-						<label for="pme-email" style="display: block; color: #1a237e; font-weight: 600; margin-bottom: 0.5rem;">Email *</label>
-						<input type="email" id="pme-email" name="pme-email" required style="width: 100%; padding: 0.8rem; border: 2px solid #e0e0e0; border-radius: 0.5rem; font-size: 1rem; transition: border-color 0.2s;" />
+
+					<div class="info-card">
+						<div class="info-icon">
+							<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+							</svg>
+						</div>
+						<h3 class="info-title">Adresse</h3>
+						<p class="info-text">123 Avenue de l'Innovation<br>75001 Paris, France</p>
 					</div>
-					<div>
-						<label for="pme-tel" style="display: block; color: #1a237e; font-weight: 600; margin-bottom: 0.5rem;">Téléphone *</label>
-						<input type="tel" id="pme-tel" name="pme-tel" required style="width: 100%; padding: 0.8rem; border: 2px solid #e0e0e0; border-radius: 0.5rem; font-size: 1rem; transition: border-color 0.2s;" />
-					</div>
-					<div>
-						<label for="pme-message" style="display: block; color: #1a237e; font-weight: 600; margin-bottom: 0.5rem;">Votre message *</label>
-						<textarea id="pme-message" name="pme-message" required rows="4" style="width: 100%; padding: 0.8rem; border: 2px solid #e0e0e0; border-radius: 0.5rem; font-size: 1rem; transition: border-color 0.2s; resize: vertical;"></textarea>
-					</div>
-					<button type="submit" style="background: #1a237e; color: #fff; font-weight: 600; padding: 1rem; border-radius: 0.5rem; font-size: 1rem; cursor: pointer; transition: background 0.2s;">Envoyer</button>
-				</form>
+				</div>
 			</div>
 
-			<!-- Formulaire Jeune Talent -->
-			<div style="background: #fff; border-radius: 1.5rem; box-shadow: 0 2px 12px #1a237e11; flex: 1 1 500px; min-width: 300px; max-width: 600px; padding: 2rem;">
-				<h2 style="color: #1a237e; font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem; text-align: center;">Je suis un jeune talent</h2>
-				<form style="display: flex; flex-direction: column; gap: 1.2rem;">
-					<div>
-						<label for="talent-nom" style="display: block; color: #1a237e; font-weight: 600; margin-bottom: 0.5rem;">Nom complet *</label>
-						<input type="text" id="talent-nom" name="talent-nom" required style="width: 100%; padding: 0.8rem; border: 2px solid #e0e0e0; border-radius: 0.5rem; font-size: 1rem; transition: border-color 0.2s;" />
+			<div class="contact-form">
+				<h2 class="section-title">Envoyez-nous un message</h2>
+				<form class="form" id="contactForm">
+					<div class="form-group">
+						<label for="name" class="form-label">Nom</label>
+						<input type="text" id="name" name="name" class="form-input" required>
 					</div>
-					<div>
-						<label for="talent-email" style="display: block; color: #1a237e; font-weight: 600; margin-bottom: 0.5rem;">Email *</label>
-						<input type="email" id="talent-email" name="talent-email" required style="width: 100%; padding: 0.8rem; border: 2px solid #e0e0e0; border-radius: 0.5rem; font-size: 1rem; transition: border-color 0.2s;" />
+
+					<div class="form-group">
+						<label for="email" class="form-label">Email</label>
+						<input type="email" id="email" name="email" class="form-input" required>
 					</div>
-					<div>
-						<label for="talent-tel" style="display: block; color: #1a237e; font-weight: 600; margin-bottom: 0.5rem;">Téléphone *</label>
-						<input type="tel" id="talent-tel" name="talent-tel" required style="width: 100%; padding: 0.8rem; border: 2px solid #e0e0e0; border-radius: 0.5rem; font-size: 1rem; transition: border-color 0.2s;" />
+
+					<div class="form-group">
+						<label for="subject" class="form-label">Sujet</label>
+						<select id="subject" name="subject" class="form-input" required>
+							<option value="">Sélectionnez un sujet</option>
+							<option value="pme">Je suis une PME</option>
+							<option value="talent">Je suis un jeune talent</option>
+							<option value="autre">Autre</option>
+						</select>
 					</div>
-					<div>
-						<label for="talent-formation" style="display: block; color: #1a237e; font-weight: 600; margin-bottom: 0.5rem;">Formation actuelle *</label>
-						<input type="text" id="talent-formation" name="talent-formation" required style="width: 100%; padding: 0.8rem; border: 2px solid #e0e0e0; border-radius: 0.5rem; font-size: 1rem; transition: border-color 0.2s;" />
+
+					<div class="form-group">
+						<label for="message" class="form-label">Message</label>
+						<textarea id="message" name="message" class="form-input" rows="5" required></textarea>
 					</div>
-					<div>
-						<label for="talent-message" style="display: block; color: #1a237e; font-weight: 600; margin-bottom: 0.5rem;">Votre message *</label>
-						<textarea id="talent-message" name="talent-message" required rows="4" style="width: 100%; padding: 0.8rem; border: 2px solid #e0e0e0; border-radius: 0.5rem; font-size: 1rem; transition: border-color 0.2s; resize: vertical;"></textarea>
-					</div>
-					<button type="submit" style="background: #1a237e; color: #fff; font-weight: 600; padding: 1rem; border-radius: 0.5rem; font-size: 1rem; cursor: pointer; transition: background 0.2s;">Envoyer</button>
+
+					<button type="submit" class="submit-button">
+						<span>Envoyer le message</span>
+						<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+						</svg>
+					</button>
 				</form>
 			</div>
+		</div>
+	</section>
+
+	<section class="map" data-animate>
+		<div class="map-container">
+			<iframe
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.9916256937595!2d2.292292615509614!3d48.85837007928757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sTour%20Eiffel!5e0!3m2!1sfr!2sfr!4v1647874587234!5m2!1sfr!2sfr"
+				width="100%"
+				height="450"
+				style="border:0;"
+				allowfullscreen=""
+				loading="lazy"
+				referrerpolicy="no-referrer-when-downgrade"
+			></iframe>
 		</div>
 	</section>
 </Layout>
 
 <style>
-input:focus, textarea:focus {
-	outline: none;
-	border-color: #3949ab !important;
-}
-button:hover {
-	background: #3949ab !important;
-}
-@media (max-width: 768px) {
-	section {
-		padding: 1.5rem 1rem !important;
+	/* Hero Section */
+	.hero {
+		position: relative;
+		min-height: 40vh;
+		background: linear-gradient(120deg, var(--primary) 0%, var(--secondary) 100%);
+		color: var(--light);
+		padding: 6rem 1rem 4rem;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
 	}
-	form {
-		gap: 1rem !important;
+
+	.hero-content {
+		max-width: 800px;
+		position: relative;
+		z-index: 2;
 	}
-	input, textarea, button {
-		font-size: 16px !important;
+
+	.hero-title {
+		font-size: clamp(2rem, 5vw, 3.5rem);
+		font-weight: 800;
+		margin-bottom: 1.5rem;
+		line-height: 1.2;
 	}
-}
-</style> 
+
+	.hero-subtitle {
+		font-size: clamp(1.1rem, 2vw, 1.3rem);
+		margin-bottom: 2.5rem;
+		opacity: 0.9;
+	}
+
+	.hero-decoration {
+		position: absolute;
+		inset: 0;
+		background: url('data:image/svg+xml;utf8,<svg width="1440" height="900" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity="0.12"><circle cx="300" cy="400" r="100" fill="%233949ab"/><circle cx="900" cy="200" r="60" fill="%231a237e"/><circle cx="1200" cy="600" r="40" fill="%233949ab"/><path d="M0 800L1440 100" stroke="%233949ab" stroke-width="2"/><path d="M0 600L1440 300" stroke="%231a237e" stroke-width="2"/></g></svg>');
+		background-size: cover;
+		background-position: center;
+		filter: blur(2px) brightness(1.1);
+		opacity: 0.9;
+	}
+
+	/* Contact Section */
+	.contact {
+		padding: 5rem 1rem;
+		background: var(--light);
+	}
+
+	.contact-container {
+		max-width: 1200px;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 4rem;
+	}
+
+	.section-title {
+		color: var(--primary);
+		font-size: clamp(1.8rem, 4vw, 2.5rem);
+		font-weight: 800;
+		margin-bottom: 3rem;
+	}
+
+	/* Contact Info */
+	.info-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+	}
+
+	.info-card {
+		background: white;
+		padding: 2rem;
+		border-radius: 1rem;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		text-align: center;
+		transition: transform 0.3s ease;
+	}
+
+	.info-card:hover {
+		transform: translateY(-5px);
+	}
+
+	.info-icon {
+		width: 4rem;
+		height: 4rem;
+		margin: 0 auto 1.5rem;
+		background: var(--primary);
+		color: white;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.info-title {
+		color: var(--primary);
+		font-size: 1.2rem;
+		font-weight: 700;
+		margin-bottom: 0.5rem;
+	}
+
+	.info-text {
+		color: var(--text);
+		opacity: 0.8;
+	}
+
+	/* Contact Form */
+	.form {
+		background: white;
+		padding: 2rem;
+		border-radius: 1rem;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	}
+
+	.form-group {
+		margin-bottom: 1.5rem;
+	}
+
+	.form-label {
+		display: block;
+		color: var(--text);
+		font-weight: 600;
+		margin-bottom: 0.5rem;
+	}
+
+	.form-input {
+		width: 100%;
+		padding: 0.75rem 1rem;
+		border: 2px solid #e2e8f0;
+		border-radius: 0.5rem;
+		font-size: 1rem;
+		transition: border-color 0.3s ease;
+	}
+
+	.form-input:focus {
+		outline: none;
+		border-color: var(--primary);
+	}
+
+	.form-input::placeholder {
+		color: #a0aec0;
+	}
+
+	.submit-button {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		background: var(--primary);
+		color: white;
+		padding: 1rem 2rem;
+		border: none;
+		border-radius: 0.5rem;
+		font-weight: 600;
+		cursor: pointer;
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+	}
+
+	.submit-button:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+	}
+
+	/* Map Section */
+	.map {
+		padding: 0;
+		background: #f7fafc;
+	}
+
+	.map-container {
+		width: 100%;
+		height: 450px;
+	}
+
+	/* Responsive Design */
+	@media (max-width: 1024px) {
+		.contact-container {
+			grid-template-columns: 1fr;
+			gap: 3rem;
+		}
+	}
+
+	@media (max-width: 768px) {
+		.hero {
+			min-height: 30vh;
+			padding: 4rem 1rem 3rem;
+		}
+
+		.info-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.form {
+			padding: 1.5rem;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.hero-title {
+			font-size: 2rem;
+		}
+
+		.hero-subtitle {
+			font-size: 1.1rem;
+		}
+
+		.section-title {
+			font-size: 1.8rem;
+		}
+
+		.info-card {
+			padding: 1.5rem;
+		}
+
+		.submit-button {
+			width: 100%;
+			justify-content: center;
+		}
+	}
+</style>
+
+<script>
+	document.getElementById('contactForm').addEventListener('submit', function(e) {
+		e.preventDefault();
+		// Ici, vous pouvez ajouter la logique d'envoi du formulaire
+		alert('Merci pour votre message ! Nous vous répondrons dans les plus brefs délais.');
+		this.reset();
+	});
+</script> 
