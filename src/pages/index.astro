@@ -5,14 +5,14 @@ import Layout from '../layouts/Layout.astro';
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout title="Horizon D'Impact 3.0 - Accueil">
+<Layout title="Horizon D'Impact 3.0 - Accueil" description="Votre partenaire pour la gestion des ressources humaines. Solutions complètes pour les PME et les jeunes talents.">
 	<section class="hero" data-animate>
-		<div class="hero-content">
+		<div class="hero-container">
 			<h1 class="hero-title">Votre partenaire pour la gestion des ressources humaines</h1>
 			<p class="hero-subtitle">Solutions complètes pour les PME et les jeunes talents</p>
 			<div class="hero-buttons">
-				<a href="/contact" class="hero-button primary">Contactez-nous</a>
-				<a href="/services" class="hero-button secondary">Découvrir nos services</a>
+				<a href="/services" class="hero-button primary">Découvrir nos services</a>
+				<a href="/contact" class="hero-button secondary">Nous contacter</a>
 			</div>
 		</div>
 		<div class="hero-decoration"></div>
@@ -20,60 +20,73 @@ import Layout from '../layouts/Layout.astro';
 
 	<section class="features" data-animate>
 		<div class="features-container">
-			<div class="feature-card">
-				<div class="feature-icon">
-					<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
-					</svg>
+			<h2 class="section-title">Nos domaines d'expertise</h2>
+			<div class="features-grid">
+				<div class="feature-card">
+					<div class="feature-icon">
+						<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+						</svg>
+					</div>
+					<h3 class="feature-title">Projets clés en main</h3>
+					<p class="feature-description">
+						De la conception à la mise en œuvre, nous accompagnons vos projets RH de A à Z.
+					</p>
 				</div>
-				<h2 class="feature-title">Projets clés en main</h2>
-				<p class="feature-description">De la conception à la réalisation, nous accompagnons vos projets avec expertise.</p>
-			</div>
 
-			<div class="feature-card">
-				<div class="feature-icon">
-					<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-					</svg>
+				<div class="feature-card">
+					<div class="feature-icon">
+						<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+						</svg>
+					</div>
+					<h3 class="feature-title">Gestion RH</h3>
+					<p class="feature-description">
+						Optimisez la gestion de vos ressources humaines avec nos solutions sur mesure.
+					</p>
 				</div>
-				<h2 class="feature-title">Gestion RH</h2>
-				<p class="feature-description">Formation, management et intégration de vos talents.</p>
-			</div>
 
-			<div class="feature-card">
-				<div class="feature-icon">
-					<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-					</svg>
+				<div class="feature-card">
+					<div class="feature-icon">
+						<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+						</svg>
+					</div>
+					<h3 class="feature-title">Administration</h3>
+					<p class="feature-description">
+						Simplifiez vos tâches administratives avec notre expertise en gestion du personnel.
+					</p>
 				</div>
-				<h2 class="feature-title">Administration</h2>
-				<p class="feature-description">Gestion administrative complète et conformité légale.</p>
 			</div>
 		</div>
 	</section>
 
-	<section class="why-us" data-animate>
-		<div class="why-us-container">
+	<section class="benefits" data-animate>
+		<div class="benefits-container">
 			<h2 class="section-title">Pourquoi nous choisir ?</h2>
 			<div class="benefits-grid">
-				<div class="benefit-card">
-					<div class="benefit-icon">
-						<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-						</svg>
-					</div>
-					<h3 class="benefit-title">Spécialiste des PME</h3>
-					<p class="benefit-description">Expertise approfondie des défis RH locaux</p>
-				</div>
-
 				<div class="benefit-card">
 					<div class="benefit-icon">
 						<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
 						</svg>
 					</div>
+					<h3 class="benefit-title">Spécialiste des PME</h3>
+					<p class="benefit-description">
+						Une expertise adaptée aux besoins spécifiques des petites et moyennes entreprises.
+					</p>
+				</div>
+
+				<div class="benefit-card">
+					<div class="benefit-icon">
+						<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+						</svg>
+					</div>
 					<h3 class="benefit-title">Approche personnalisée</h3>
-					<p class="benefit-description">Solutions 100% adaptées à votre secteur d'activité</p>
+					<p class="benefit-description">
+						Des solutions sur mesure adaptées à vos objectifs et contraintes.
+					</p>
 				</div>
 
 				<div class="benefit-card">
@@ -83,17 +96,21 @@ import Layout from '../layouts/Layout.astro';
 						</svg>
 					</div>
 					<h3 class="benefit-title">Gain de temps</h3>
-					<p class="benefit-description">Optimisation de votre productivité</p>
+					<p class="benefit-description">
+						Optimisez vos processus RH et concentrez-vous sur votre cœur de métier.
+					</p>
 				</div>
 
 				<div class="benefit-card">
 					<div class="benefit-icon">
 						<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
 						</svg>
 					</div>
 					<h3 class="benefit-title">Équipe expérimentée</h3>
-					<p class="benefit-description">Professionnels engagés à votre service</p>
+					<p class="benefit-description">
+						Des professionnels qualifiés à votre service pour des résultats garantis.
+					</p>
 				</div>
 			</div>
 		</div>
@@ -101,11 +118,9 @@ import Layout from '../layouts/Layout.astro';
 
 	<section class="cta" data-animate>
 		<div class="cta-container">
-			<h2 class="section-title">FAITES LE CHOIX DE LA PERFORMANCE RH</h2>
-			<p class="cta-text">Contactez-nous aujourd'hui pour un diagnostic RH et pour évaluer votre affaire gratuitement</p>
-			<div class="cta-buttons">
-				<a href="/contact" class="cta-button primary">Contactez-nous</a>
-			</div>
+			<h2 class="cta-title">Prêt à optimiser vos ressources humaines ?</h2>
+			<p class="cta-text">Contactez-nous dès aujourd'hui pour un diagnostic RH gratuit.</p>
+			<a href="/contact" class="cta-button">Nous contacter</a>
 		</div>
 	</section>
 </Layout>
@@ -114,60 +129,55 @@ import Layout from '../layouts/Layout.astro';
 	/* Hero Section */
 	.hero {
 		position: relative;
-		min-height: 80vh;
-		background: linear-gradient(120deg, var(--primary) 0%, var(--secondary) 100%);
+		padding: 6rem 1rem;
+		background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
 		color: var(--light);
-		padding: 6rem 1rem 4rem;
 		overflow: hidden;
-		display: flex;
-		align-items: center;
-		justify-content: center;
+	}
+
+	.hero-container {
+		max-width: 1200px;
+		margin: 0 auto;
+		position: relative;
+		z-index: 1;
 		text-align: center;
 	}
 
-	.hero-content {
-		max-width: 800px;
-		position: relative;
-		z-index: 2;
-	}
-
 	.hero-title {
-		font-size: clamp(2rem, 5vw, 3.5rem);
+		font-size: 3rem;
 		font-weight: 800;
-		margin-bottom: 1.5rem;
 		line-height: 1.2;
+		margin-bottom: 1.5rem;
 	}
 
 	.hero-subtitle {
-		font-size: clamp(1.1rem, 2vw, 1.3rem);
-		margin-bottom: 2.5rem;
+		font-size: 1.5rem;
 		opacity: 0.9;
+		margin-bottom: 2.5rem;
 	}
 
 	.hero-buttons {
 		display: flex;
 		gap: 1rem;
 		justify-content: center;
-		flex-wrap: wrap;
 	}
 
 	.hero-button {
-		display: inline-block;
 		padding: 1rem 2rem;
 		border-radius: var(--radius);
 		font-weight: 600;
 		text-decoration: none;
-		transition: transform 0.3s ease, box-shadow 0.3s ease;
-	}
-
-	.hero-button:hover {
-		transform: translateY(-2px);
-		box-shadow: var(--shadow-lg);
+		transition: var(--transition);
 	}
 
 	.hero-button.primary {
-		background: var(--accent);
+		background: var(--light);
 		color: var(--primary);
+	}
+
+	.hero-button.primary:hover {
+		background: var(--gray-100);
+		transform: translateY(-2px);
 	}
 
 	.hero-button.secondary {
@@ -176,85 +186,86 @@ import Layout from '../layouts/Layout.astro';
 		border: 2px solid var(--light);
 	}
 
+	.hero-button.secondary:hover {
+		background: var(--light);
+		color: var(--primary);
+		transform: translateY(-2px);
+	}
+
 	.hero-decoration {
 		position: absolute;
-		inset: 0;
-		background: url('data:image/svg+xml;utf8,<svg width="1440" height="900" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity="0.12"><circle cx="300" cy="400" r="100" fill="%233949ab"/><circle cx="900" cy="200" r="60" fill="%231a237e"/><circle cx="1200" cy="600" r="40" fill="%233949ab"/><path d="M0 800L1440 100" stroke="%233949ab" stroke-width="2"/><path d="M0 600L1440 300" stroke="%231a237e" stroke-width="2"/></g></svg>');
-		background-size: cover;
-		background-position: center;
-		filter: blur(2px) brightness(1.1);
-		opacity: 0.9;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: url('/hero-pattern.svg') center/cover;
+		opacity: 0.1;
 	}
 
 	/* Features Section */
 	.features {
 		padding: 5rem 1rem;
-		background: var(--light);
+		background: var(--gray-50);
 	}
 
 	.features-container {
 		max-width: 1200px;
 		margin: 0 auto;
+	}
+
+	.section-title {
+		text-align: center;
+		font-size: 2.5rem;
+		font-weight: 700;
+		color: var(--primary);
+		margin-bottom: 3rem;
+	}
+
+	.features-grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 		gap: 2rem;
 	}
 
 	.feature-card {
-		background: white;
+		background: var(--light);
 		padding: 2rem;
 		border-radius: var(--radius);
 		box-shadow: var(--shadow);
-		transition: transform 0.3s ease;
-		text-align: center;
+		transition: var(--transition);
 	}
 
 	.feature-card:hover {
 		transform: translateY(-5px);
+		box-shadow: var(--shadow-lg);
 	}
 
 	.feature-icon {
-		width: 4rem;
-		height: 4rem;
-		margin: 0 auto 1.5rem;
-		background: var(--primary);
-		color: white;
-		border-radius: var(--radius-full);
-		display: flex;
-		align-items: center;
-		justify-content: center;
+		color: var(--primary);
+		margin-bottom: 1.5rem;
 	}
 
 	.feature-title {
-		color: var(--primary);
-		font-size: 1.2rem;
-		font-weight: 700;
+		font-size: 1.5rem;
+		font-weight: 600;
 		margin-bottom: 1rem;
+		color: var(--text);
 	}
 
 	.feature-description {
-		color: var(--text);
-		opacity: 0.8;
+		color: var(--text-light);
 		line-height: 1.6;
 	}
 
-	/* Why Us Section */
-	.why-us {
+	/* Benefits Section */
+	.benefits {
 		padding: 5rem 1rem;
-		background: var(--gray-100);
+		background: var(--light);
 	}
 
-	.why-us-container {
+	.benefits-container {
 		max-width: 1200px;
 		margin: 0 auto;
-	}
-
-	.section-title {
-		color: var(--primary);
-		font-size: clamp(1.8rem, 4vw, 2.5rem);
-		font-weight: 800;
-		margin-bottom: 3rem;
-		text-align: center;
 	}
 
 	.benefits-grid {
@@ -264,12 +275,9 @@ import Layout from '../layouts/Layout.astro';
 	}
 
 	.benefit-card {
-		background: white;
-		padding: 2rem;
-		border-radius: var(--radius);
-		box-shadow: var(--shadow);
 		text-align: center;
-		transition: transform 0.3s ease;
+		padding: 2rem;
+		transition: var(--transition);
 	}
 
 	.benefit-card:hover {
@@ -277,33 +285,26 @@ import Layout from '../layouts/Layout.astro';
 	}
 
 	.benefit-icon {
-		width: 4rem;
-		height: 4rem;
-		margin: 0 auto 1.5rem;
-		background: var(--primary);
-		color: white;
-		border-radius: var(--radius-full);
-		display: flex;
-		align-items: center;
-		justify-content: center;
+		color: var(--primary);
+		margin-bottom: 1.5rem;
 	}
 
 	.benefit-title {
-		color: var(--primary);
-		font-size: 1.2rem;
-		font-weight: 700;
-		margin-bottom: 0.5rem;
+		font-size: 1.25rem;
+		font-weight: 600;
+		margin-bottom: 1rem;
+		color: var(--text);
 	}
 
 	.benefit-description {
-		color: var(--text);
-		opacity: 0.8;
+		color: var(--text-light);
+		line-height: 1.6;
 	}
 
 	/* CTA Section */
 	.cta {
 		padding: 5rem 1rem;
-		background: linear-gradient(120deg, var(--primary) 0%, var(--secondary) 100%);
+		background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
 		color: var(--light);
 		text-align: center;
 	}
@@ -313,78 +314,58 @@ import Layout from '../layouts/Layout.astro';
 		margin: 0 auto;
 	}
 
-	.cta-text {
-		font-size: 1.2rem;
-		margin-bottom: 2.5rem;
-		opacity: 0.9;
+	.cta-title {
+		font-size: 2.5rem;
+		font-weight: 700;
+		margin-bottom: 1.5rem;
 	}
 
-	.cta-buttons {
-		display: flex;
-		gap: 1rem;
-		justify-content: center;
-		flex-wrap: wrap;
+	.cta-text {
+		font-size: 1.25rem;
+		opacity: 0.9;
+		margin-bottom: 2.5rem;
 	}
 
 	.cta-button {
 		display: inline-block;
-		padding: 1rem 2rem;
+		padding: 1rem 2.5rem;
+		background: var(--light);
+		color: var(--primary);
+		text-decoration: none;
 		border-radius: var(--radius);
 		font-weight: 600;
-		text-decoration: none;
-		transition: transform 0.3s ease, box-shadow 0.3s ease;
+		transition: var(--transition);
 	}
 
 	.cta-button:hover {
+		background: var(--gray-100);
 		transform: translateY(-2px);
-		box-shadow: var(--shadow-lg);
-	}
-
-	.cta-button.primary {
-		background: var(--accent);
-		color: var(--primary);
 	}
 
 	/* Responsive Design */
 	@media (max-width: 768px) {
-		.hero {
-			min-height: 60vh;
-			padding: 4rem 1rem 3rem;
+		.hero-title {
+			font-size: 2rem;
+		}
+
+		.hero-subtitle {
+			font-size: 1.25rem;
 		}
 
 		.hero-buttons {
 			flex-direction: column;
 		}
 
-		.hero-button {
-			width: 100%;
-		}
-
-		.benefits-grid {
-			grid-template-columns: 1fr;
-		}
-
-		.cta-button {
-			width: 100%;
-		}
-	}
-
-	@media (max-width: 480px) {
-		.hero-title {
+		.section-title {
 			font-size: 2rem;
 		}
 
-		.hero-subtitle {
+		.cta-title {
+			font-size: 2rem;
+		}
+
+		.cta-text {
 			font-size: 1.1rem;
-		}
-
-		.section-title {
-			font-size: 1.8rem;
-		}
-
-		.feature-card,
-		.benefit-card {
-			padding: 1.5rem;
 		}
 	}
 </style>

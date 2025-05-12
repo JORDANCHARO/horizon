@@ -11,6 +11,49 @@ import Layout from '../layouts/Layout.astro';
 		<div class="hero-decoration"></div>
 	</section>
 
+	<section class="faq" data-animate>
+		<div class="faq-container">
+			<h2 class="faq-title">Questions fréquentes</h2>
+			<div class="faq-grid">
+				<div class="faq-item">
+					<button class="faq-question">
+						<span>Quels sont vos délais de réponse ?</span>
+						<svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+						</svg>
+					</button>
+					<div class="faq-answer">
+						<p>Nous nous engageons à répondre à toutes vos demandes dans un délai de 24 à 48 heures ouvrables.</p>
+					</div>
+				</div>
+
+				<div class="faq-item">
+					<button class="faq-question">
+						<span>Comment puis-je prendre rendez-vous ?</span>
+						<svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+						</svg>
+					</button>
+					<div class="faq-answer">
+						<p>Vous pouvez prendre rendez-vous en nous contactant par téléphone ou en remplissant le formulaire ci-dessous. Nous vous recontacterons pour confirmer la date et l'heure.</p>
+					</div>
+				</div>
+
+				<div class="faq-item">
+					<button class="faq-question">
+						<span>Quels sont vos horaires d'ouverture ?</span>
+						<svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+						</svg>
+					</button>
+					<div class="faq-answer">
+						<p>Nous sommes ouverts du lundi au vendredi, de 8h à 18h. Les rendez-vous peuvent être pris en dehors de ces horaires selon disponibilité.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<section class="contact" data-animate>
 		<div class="contact-container">
 			<div class="contact-info">
@@ -83,6 +126,8 @@ import Layout from '../layouts/Layout.astro';
 		</div>
 	</section>
 </Layout>
+
+<div id="notification" class="notification" role="alert" aria-live="polite"></div>
 
 <style>
 	/* Hero Section */
@@ -314,23 +359,284 @@ import Layout from '../layouts/Layout.astro';
 			padding: 1.5rem;
 		}
 	}
+
+	/* Styles pour les messages d'erreur */
+	.error {
+		border-color: var(--error) !important;
+	}
+
+	.error-message {
+		color: var(--error);
+		font-size: 0.875rem;
+		margin-top: 0.25rem;
+	}
+
+	/* Style pour le bouton désactivé */
+	.form-button:disabled {
+		opacity: 0.7;
+		cursor: not-allowed;
+		transform: none !important;
+		box-shadow: none !important;
+	}
+
+	/* Animation de chargement */
+	@keyframes spin {
+		to {
+			transform: rotate(360deg);
+		}
+	}
+
+	.form-button:disabled::after {
+		content: '';
+		display: inline-block;
+		width: 1rem;
+		height: 1rem;
+		margin-left: 0.5rem;
+		border: 2px solid var(--light);
+		border-top-color: transparent;
+		border-radius: 50%;
+		animation: spin 1s linear infinite;
+	}
+
+	/* FAQ Section */
+	.faq {
+		padding: 5rem 1rem;
+		background: var(--gray-50);
+	}
+
+	.faq-container {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	.faq-title {
+		color: var(--primary);
+		font-size: 2rem;
+		font-weight: 700;
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+
+	.faq-grid {
+		display: grid;
+		gap: 1.5rem;
+	}
+
+	.faq-item {
+		background: white;
+		border-radius: var(--radius);
+		box-shadow: var(--shadow);
+		overflow: hidden;
+	}
+
+	.faq-question {
+		width: 100%;
+		padding: 1.5rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		background: none;
+		border: none;
+		cursor: pointer;
+		font-size: 1.1rem;
+		font-weight: 600;
+		color: var(--text);
+		text-align: left;
+		transition: background-color 0.3s ease;
+	}
+
+	.faq-question:hover {
+		background-color: var(--gray-50);
+	}
+
+	.faq-icon {
+		width: 1.5rem;
+		height: 1.5rem;
+		transition: transform 0.3s ease;
+	}
+
+	.faq-item.active .faq-icon {
+		transform: rotate(180deg);
+	}
+
+	.faq-answer {
+		padding: 0 1.5rem;
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.3s ease, padding 0.3s ease;
+	}
+
+	.faq-item.active .faq-answer {
+		padding: 0 1.5rem 1.5rem;
+		max-height: 200px;
+	}
+
+	.faq-answer p {
+		color: var(--text);
+		opacity: 0.8;
+		line-height: 1.6;
+	}
+
+	@media (max-width: 768px) {
+		.faq-title {
+			font-size: 1.8rem;
+		}
+
+		.faq-question {
+			font-size: 1rem;
+			padding: 1.25rem;
+		}
+	}
+
+	/* Notification System */
+	.notification {
+		position: fixed;
+		bottom: 2rem;
+		right: 2rem;
+		padding: 1rem 2rem;
+		border-radius: var(--radius);
+		background: white;
+		box-shadow: var(--shadow-lg);
+		transform: translateY(150%);
+		transition: transform 0.3s ease;
+		z-index: 1000;
+	}
+
+	.notification.show {
+		transform: translateY(0);
+	}
+
+	.notification.success {
+		background: var(--success);
+		color: white;
+	}
+
+	.notification.error {
+		background: var(--error);
+		color: white;
+	}
+
+	@media (max-width: 768px) {
+		.notification {
+			left: 1rem;
+			right: 1rem;
+			bottom: 1rem;
+			text-align: center;
+		}
+	}
 </style>
 
 <script>
+	// Système de notification
+	function showNotification(message: string, type: 'success' | 'error' = 'success') {
+		const notification = document.getElementById('notification');
+		if (!notification) return;
+
+		notification.textContent = message;
+		notification.className = `notification ${type} show`;
+
+		setTimeout(() => {
+			notification.classList.remove('show');
+		}, 5000);
+	}
+
+	// Mise à jour du gestionnaire de formulaire
 	document.getElementById('contactForm')?.addEventListener('submit', async (e) => {
 		e.preventDefault();
 
-		const formData = new FormData(e.target as HTMLFormElement);
+		const form = e.target as HTMLFormElement;
+		const formData = new FormData(form);
 		const data = Object.fromEntries(formData.entries());
+
+		// Validation des champs
+		const email = formData.get('email') as string;
+		const phone = formData.get('phone') as string;
+		const message = formData.get('message') as string;
+
+		// Validation de l'email
+		const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+		if (!emailRegex.test(email)) {
+			showNotification('Veuillez entrer une adresse email valide', 'error');
+			return;
+		}
+
+		// Validation du téléphone (si fourni)
+		if (phone) {
+			const phoneRegex = /^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}$/;
+			if (!phoneRegex.test(phone)) {
+				showNotification('Veuillez entrer un numéro de téléphone valide', 'error');
+				return;
+			}
+		}
+
+		// Validation de la longueur du message
+		if (message.length < 10) {
+			showNotification('Le message doit contenir au moins 10 caractères', 'error');
+			return;
+		}
 
 		try {
 			// Ici, vous pouvez ajouter la logique pour envoyer les données du formulaire
 			console.log('Données du formulaire:', data);
-			alert('Message envoyé avec succès !');
-			(e.target as HTMLFormElement).reset();
+			
+			// Désactiver le bouton pendant l'envoi
+			const submitButton = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+			submitButton.disabled = true;
+			submitButton.textContent = 'Envoi en cours...';
+
+			// Simuler un délai d'envoi (à remplacer par votre logique d'API)
+			await new Promise(resolve => setTimeout(resolve, 1000));
+
+			showNotification('Message envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.');
+			form.reset();
 		} catch (error) {
 			console.error('Erreur lors de l\'envoi du formulaire:', error);
-			alert('Une erreur est survenue lors de l\'envoi du message. Veuillez réessayer.');
+			showNotification('Une erreur est survenue lors de l\'envoi du message. Veuillez réessayer.', 'error');
+		} finally {
+			// Réactiver le bouton
+			const submitButton = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+			submitButton.disabled = false;
+			submitButton.textContent = 'Envoyer le message';
 		}
+	});
+
+	// Ajout de la validation en temps réel
+	const inputs = document.querySelectorAll('.form-input, .form-textarea');
+	inputs.forEach(input => {
+		input.addEventListener('input', (e) => {
+			const target = e.target as HTMLInputElement;
+			const errorMessage = target.parentElement?.querySelector('.error-message');
+			
+			if (target.validity.valid) {
+				target.classList.remove('error');
+				errorMessage?.remove();
+			} else {
+				target.classList.add('error');
+				if (!errorMessage) {
+					const error = document.createElement('span');
+					error.className = 'error-message';
+					error.textContent = target.validationMessage;
+					target.parentElement?.appendChild(error);
+				}
+			}
+		});
+	});
+
+	// Gestion des FAQ
+	document.querySelectorAll('.faq-question').forEach(question => {
+		question.addEventListener('click', () => {
+			const faqItem = question.parentElement;
+			const isActive = faqItem?.classList.contains('active');
+
+			// Fermer toutes les autres FAQ
+			document.querySelectorAll('.faq-item').forEach(item => {
+				item.classList.remove('active');
+			});
+
+			// Ouvrir/fermer la FAQ cliquée
+			if (!isActive) {
+				faqItem?.classList.add('active');
+			}
+		});
 	});
 </script> 
