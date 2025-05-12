@@ -1,9 +1,10 @@
 ---
 interface Props {
 	title: string;
+	description?: string;
 }
 
-const { title } = Astro.props;
+const { title, description = "Horizon D'Impact 3.0 - Votre partenaire pour la gestion des ressources humaines" } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -14,161 +15,156 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
-		<meta name="description" content="Horizon Impact : solutions web sur-mesure, accompagnement humain, résultats concrets. Agence digitale à impact positif." />
+		<meta name="description" content={description} />
 		<meta property="og:title" content={title} />
-		<meta property="og:description" content="Horizon Impact : solutions web sur-mesure, accompagnement humain, résultats concrets. Agence digitale à impact positif." />
+		<meta property="og:description" content={description} />
 		<meta property="og:type" content="website" />
 		<meta property="og:image" content="/logo.png" />
 		<meta property="og:locale" content="fr_FR" />
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content={title} />
-		<meta name="twitter:description" content="Horizon Impact : solutions web sur-mesure, accompagnement humain, résultats concrets. Agence digitale à impact positif." />
+		<meta name="twitter:description" content={description} />
 		<meta name="twitter:image" content="/logo.png" />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 	</head>
 	<body>
 		<header class="header">
-			<nav class="nav-container">
-				<a href="/" class="logo-link">
-					<img src="/logos/logo.png" alt="Logo Horizon D'Impact 3.0" class="logo-img" />
+			<div class="header-container">
+				<a href="/" class="logo">
 					<span class="logo-text">Horizon D'Impact 3.0</span>
 				</a>
-				
-				<button id="menuButton" class="menu-button" aria-label="Menu">
-					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-						<line x1="3" y1="12" x2="21" y2="12"></line>
-						<line x1="3" y1="6" x2="21" y2="6"></line>
-						<line x1="3" y1="18" x2="21" y2="18"></line>
-					</svg>
-				</button>
-
-				<div id="desktopNav" class="desktop-nav">
-					<a href="/" class="nav-link">Accueil</a>
-					<a href="/services" class="nav-link">Services</a>
-					<a href="/a-propos" class="nav-link">À propos</a>
-					<a href="/contact" class="nav-link">Contact</a>
-				</div>
-
-				<div id="mobileNav" class="mobile-nav">
-					<button id="closeMenu" class="close-button" aria-label="Fermer le menu">
-						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-							<line x1="18" y1="6" x2="6" y2="18"></line>
-							<line x1="6" y1="6" x2="18" y2="18"></line>
+				<nav class="nav">
+					<button class="mobile-menu-button" aria-label="Menu">
+						<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
 						</svg>
 					</button>
-					<div class="mobile-nav-links">
-						<a href="/" class="mobile-nav-link">Accueil</a>
-						<a href="/services" class="mobile-nav-link">Services</a>
-						<a href="/a-propos" class="mobile-nav-link">À propos</a>
-						<a href="/contact" class="mobile-nav-link">Contact</a>
+					<div class="nav-links">
+						<a href="/" class="nav-link">Accueil</a>
+						<a href="/services" class="nav-link">Services</a>
+						<a href="/contact" class="nav-link">Contact</a>
 					</div>
-				</div>
-			</nav>
+				</nav>
+			</div>
 		</header>
 
-		<main class="main-content">
+		<main>
 			<slot />
 		</main>
 
 		<footer class="footer">
 			<div class="footer-container">
-				<div class="footer-grid">
-					<div class="footer-section">
-						<h3 class="footer-title">Horizon Impact</h3>
-						<p class="footer-text">Accompagnement des PME et formation des jeunes talents.</p>
-					</div>
-					<div class="footer-section">
-						<h3 class="footer-title">Navigation</h3>
-						<div class="footer-links">
-							<a href="/" class="footer-link">Accueil</a>
-							<a href="/services" class="footer-link">Services</a>
-							<a href="/a-propos" class="footer-link">À propos</a>
-							<a href="/contact" class="footer-link">Contact</a>
-						</div>
-					</div>
-					<div class="footer-section">
-						<h3 class="footer-title">Contact</h3>
-						<p class="footer-text">Email: horizon.dimpact.3.0@gmail.com</p>
-						<p class="footer-text">Tél: +237 6 99 94 20 02</p>
-						<div class="map-container">
-							<iframe 
-								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.7536223150963!2d9.7053!3d4.0516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNMKwMDMnMDUuOCJOIDnCsDQyJzE5LjEiRQ!5e0!3m2!1sfr!2scm!4v1635000000000!5m2!1sfr!2scm" 
-								width="100%" 
-								height="200" 
-								style="border:0; border-radius: 8px;" 
-								allowfullscreen="" 
-								loading="lazy"
-							></iframe>
-						</div>
-					</div>
+				<div class="footer-section">
+					<h3 class="footer-title">Horizon D'Impact 3.0</h3>
+					<p class="footer-description">{description}</p>
 				</div>
-				<div class="footer-bottom">
-					<p class="footer-copyright">© 2024 Horizon Impact. Tous droits réservés.</p>
+				<div class="footer-section">
+					<h3 class="footer-title">Contact</h3>
+					<ul class="footer-links">
+						<li>
+							<a href="tel:+237696953397" class="footer-link">
+								<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+								</svg>
+								+237 696.953.397
+							</a>
+						</li>
+						<li>
+							<a href="mailto:horizon.dimpact.3.0@gmail.com" class="footer-link">
+								<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+								</svg>
+								horizon.dimpact.3.0@gmail.com
+							</a>
+						</li>
+						<li>
+							<a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="footer-link">
+								<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+								</svg>
+								Forestière Logbaba, Douala, Cameroun
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-section">
+					<h3 class="footer-title">Navigation</h3>
+					<ul class="footer-links">
+						<li><a href="/" class="footer-link">Accueil</a></li>
+						<li><a href="/services" class="footer-link">Services</a></li>
+						<li><a href="/contact" class="footer-link">Contact</a></li>
+					</ul>
 				</div>
 			</div>
+			<div class="footer-bottom">
+				<p>&copy; {new Date().getFullYear()} Horizon D'Impact 3.0. Tous droits réservés.</p>
+			</div>
 		</footer>
+
+		<script>
+			// Gestion du menu mobile
+			const mobileMenuButton = document.querySelector('.mobile-menu-button');
+			const navLinks = document.querySelector('.nav-links');
+
+			mobileMenuButton?.addEventListener('click', () => {
+				navLinks?.classList.toggle('active');
+				mobileMenuButton.setAttribute('aria-expanded', navLinks?.classList.contains('active') ? 'true' : 'false');
+			});
+
+			// Animation des sections au scroll
+			const observerOptions = {
+				root: null,
+				rootMargin: '0px',
+				threshold: 0.1
+			};
+
+			const observer = new IntersectionObserver((entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add('animate');
+						observer.unobserve(entry.target);
+					}
+				});
+			}, observerOptions);
+
+			document.querySelectorAll('[data-animate]').forEach((element) => {
+				observer.observe(element);
+			});
+		</script>
 	</body>
 </html>
 
-<script>
-	// Gestion du menu mobile
-	const menuButton = document.getElementById('menuButton');
-	const closeMenu = document.getElementById('closeMenu');
-	const mobileNav = document.getElementById('mobileNav');
-	const desktopNav = document.getElementById('desktopNav');
-
-	function toggleMenu() {
-		mobileNav.classList.toggle('active');
-		document.body.classList.toggle('menu-open');
-	}
-
-	menuButton?.addEventListener('click', toggleMenu);
-	closeMenu?.addEventListener('click', toggleMenu);
-
-	function handleResize() {
-		if (window.innerWidth <= 768) {
-			menuButton.style.display = 'block';
-			desktopNav.style.display = 'none';
-		} else {
-			menuButton.style.display = 'none';
-			desktopNav.style.display = 'flex';
-			mobileNav.classList.remove('active');
-			document.body.classList.remove('menu-open');
-		}
-	}
-
-	handleResize();
-	window.addEventListener('resize', handleResize);
-
-	// Animation des sections
-	const observer = new IntersectionObserver((entries) => {
-		entries.forEach(entry => {
-			if (entry.isIntersecting) {
-				entry.target.classList.add('animate-in');
-			}
-		});
-	}, {
-		threshold: 0.1
-	});
-
-	document.querySelectorAll('[data-animate]').forEach((element) => {
-		element.classList.add('animate-element');
-		observer.observe(element);
-	});
-</script>
-
-<style>
+<style is:global>
 	:root {
 		--primary: #1a237e;
 		--secondary: #3949ab;
-		--accent: #ffb300;
-		--text: #333;
-		--light: #fff;
-		--gray: #e0e0e0;
-		--header-height: 4rem;
-		--transition: all 0.3s ease;
+		--accent: #ffd700;
+		--text: #1f2937;
+		--light: #ffffff;
+		--gray-100: #f3f4f6;
+		--gray-200: #e5e7eb;
+		--gray-300: #d1d5db;
+		--gray-400: #9ca3af;
+		--gray-500: #6b7280;
+		--gray-600: #4b5563;
+		--gray-700: #374151;
+		--gray-800: #1f2937;
+		--gray-900: #111827;
+		--shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+		--shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+		--shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+		--shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+		--radius-sm: 0.25rem;
+		--radius: 0.5rem;
+		--radius-md: 0.75rem;
+		--radius-lg: 1rem;
+		--radius-xl: 1.5rem;
+		--radius-2xl: 2rem;
+		--radius-3xl: 3rem;
+		--radius-full: 9999px;
 	}
 
 	* {
@@ -177,232 +173,231 @@ const { title } = Astro.props;
 		box-sizing: border-box;
 	}
 
-	body {
+	html {
 		font-family: 'Inter', system-ui, -apple-system, sans-serif;
 		line-height: 1.5;
+		-webkit-text-size-adjust: 100%;
+		-moz-tab-size: 4;
+		tab-size: 4;
+		scroll-behavior: smooth;
+	}
+
+	body {
+		margin: 0;
+		line-height: inherit;
 		color: var(--text);
 		background-color: var(--light);
 	}
 
-	/* Header & Navigation */
+	/* Header Styles */
 	.header {
 		position: fixed;
 		top: 0;
 		left: 0;
 		right: 0;
-		background: var(--light);
-		box-shadow: 0 2px 8px rgba(26, 35, 126, 0.1);
+		background: rgba(255, 255, 255, 0.95);
+		backdrop-filter: blur(8px);
 		z-index: 1000;
-		height: var(--header-height);
+		box-shadow: var(--shadow);
 	}
 
-	.nav-container {
+	.header-container {
 		max-width: 1200px;
 		margin: 0 auto;
-		padding: 0 1rem;
-		height: 100%;
+		padding: 1rem;
 		display: flex;
+		align-items: center;
 		justify-content: space-between;
-		align-items: center;
 	}
 
-	.logo-link {
+	.logo {
+		text-decoration: none;
 		display: flex;
 		align-items: center;
-		gap: 0.7rem;
-		text-decoration: none;
-	}
-
-	.logo-img {
-		height: 2.5rem;
-		width: auto;
-		border-radius: 0.7rem;
-		background: #f5f5f5;
-		box-shadow: 0 2px 8px rgba(26, 35, 126, 0.2);
-		padding: 0.2rem;
+		gap: 0.5rem;
 	}
 
 	.logo-text {
+		font-size: 1.25rem;
+		font-weight: 700;
 		color: var(--primary);
-		font-weight: 800;
-		font-size: 1.5rem;
 	}
 
-	.menu-button {
+	.nav {
+		display: flex;
+		align-items: center;
+	}
+
+	.mobile-menu-button {
 		display: none;
 		background: none;
 		border: none;
+		color: var(--primary);
 		cursor: pointer;
 		padding: 0.5rem;
-		color: var(--primary);
 	}
 
-	.desktop-nav {
+	.nav-links {
 		display: flex;
 		gap: 2rem;
+		align-items: center;
 	}
 
 	.nav-link {
-		color: var(--primary);
+		color: var(--text);
 		text-decoration: none;
 		font-weight: 500;
-		transition: var(--transition);
+		transition: color 0.2s ease;
+		position: relative;
+	}
+
+	.nav-link::after {
+		content: '';
+		position: absolute;
+		bottom: -4px;
+		left: 0;
+		width: 0;
+		height: 2px;
+		background: var(--primary);
+		transition: width 0.2s ease;
 	}
 
 	.nav-link:hover {
-		color: var(--accent);
-	}
-
-	.mobile-nav {
-		display: none;
-		position: fixed;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background: var(--light);
-		padding: 5rem 2rem 2rem;
-		z-index: 999;
-		transform: translateX(100%);
-		transition: var(--transition);
-	}
-
-	.mobile-nav.active {
-		transform: translateX(0);
-	}
-
-	.close-button {
-		position: absolute;
-		top: 1rem;
-		right: 1rem;
-		background: none;
-		border: none;
-		cursor: pointer;
-		padding: 0.5rem;
 		color: var(--primary);
 	}
 
-	.mobile-nav-links {
-		display: flex;
-		flex-direction: column;
-		gap: 1.5rem;
+	.nav-link:hover::after {
+		width: 100%;
 	}
 
-	.mobile-nav-link {
-		color: var(--primary);
-		text-decoration: none;
-		font-weight: 500;
-		font-size: 1.2rem;
-		transition: var(--transition);
-	}
-
-	.mobile-nav-link:hover {
-		color: var(--accent);
-	}
-
-	/* Main Content */
-	.main-content {
-		margin-top: var(--header-height);
-		min-height: calc(100vh - var(--header-height));
-	}
-
-	/* Footer */
+	/* Footer Styles */
 	.footer {
 		background: var(--primary);
 		color: var(--light);
-		padding: 3rem 1rem;
+		padding: 4rem 1rem 1rem;
 	}
 
 	.footer-container {
 		max-width: 1200px;
 		margin: 0 auto;
-	}
-
-	.footer-grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-		gap: 2rem;
-		margin-bottom: 2rem;
+		gap: 3rem;
+	}
+
+	.footer-section {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
 	}
 
 	.footer-title {
-		font-size: 1.2rem;
+		font-size: 1.25rem;
 		font-weight: 700;
-		margin-bottom: 1rem;
+		margin-bottom: 0.5rem;
 	}
 
-	.footer-text {
-		color: var(--gray);
+	.footer-description {
+		opacity: 0.8;
+		line-height: 1.6;
 	}
 
 	.footer-links {
+		list-style: none;
 		display: flex;
 		flex-direction: column;
-		gap: 0.5rem;
+		gap: 0.75rem;
 	}
 
 	.footer-link {
-		color: var(--gray);
+		color: var(--light);
 		text-decoration: none;
-		transition: var(--transition);
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		opacity: 0.8;
+		transition: opacity 0.2s ease;
 	}
 
 	.footer-link:hover {
-		color: var(--accent);
-	}
-
-	.map-container {
-		margin-top: 1rem;
+		opacity: 1;
 	}
 
 	.footer-bottom {
-		text-align: center;
+		max-width: 1200px;
+		margin: 3rem auto 0;
 		padding-top: 2rem;
-		border-top: 1px solid var(--secondary);
+		border-top: 1px solid rgba(255, 255, 255, 0.1);
+		text-align: center;
+		opacity: 0.6;
 	}
 
-	.footer-copyright {
-		color: var(--gray);
-	}
-
-	/* Animations */
-	.animate-element {
+	/* Animation Classes */
+	[data-animate] {
 		opacity: 0;
 		transform: translateY(20px);
-		transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+		transition: opacity 0.6s ease, transform 0.6s ease;
 	}
 
-	.animate-element.animate-in {
+	[data-animate].animate {
 		opacity: 1;
 		transform: translateY(0);
 	}
 
 	/* Responsive Design */
 	@media (max-width: 768px) {
-		.menu-button {
+		.mobile-menu-button {
 			display: block;
 		}
 
-		.desktop-nav {
-			display: none;
+		.nav-links {
+			position: fixed;
+			top: 4rem;
+			left: 0;
+			right: 0;
+			background: var(--light);
+			padding: 1rem;
+			flex-direction: column;
+			gap: 1rem;
+			transform: translateY(-100%);
+			opacity: 0;
+			transition: transform 0.3s ease, opacity 0.3s ease;
+			box-shadow: var(--shadow);
 		}
 
-		.mobile-nav {
-			display: block;
+		.nav-links.active {
+			transform: translateY(0);
+			opacity: 1;
 		}
 
-		.logo-text {
-			display: none;
-		}
-
-		body.menu-open {
-			overflow: hidden;
+		.footer-container {
+			grid-template-columns: 1fr;
+			gap: 2rem;
 		}
 	}
 
-	@media (max-width: 480px) {
-		.footer-grid {
-			grid-template-columns: 1fr;
-		}
+	/* Utility Classes */
+	.w-5 {
+		width: 1.25rem;
+	}
+
+	.h-5 {
+		height: 1.25rem;
+	}
+
+	.w-6 {
+		width: 1.5rem;
+	}
+
+	.h-6 {
+		height: 1.5rem;
+	}
+
+	.w-8 {
+		width: 2rem;
+	}
+
+	.h-8 {
+		height: 2rem;
 	}
 </style>
