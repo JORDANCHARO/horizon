@@ -40,9 +40,11 @@ const { title, description = "Horizon D'Impact 3.0 - Votre partenaire pour la ge
 						aria-label="Menu principal"
 					>
 						<span class="sr-only">Menu</span>
-						<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-						</svg>
+						<div class="menu-icon">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
 					</button>
 
 					<ul id="main-menu" class="nav-list" role="menu">
@@ -132,11 +134,31 @@ const { title, description = "Horizon D'Impact 3.0 - Votre partenaire pour la ge
 			// Gestion du menu mobile
 			const menuButton = document.querySelector('.mobile-menu-button');
 			const mainMenu = document.querySelector('#main-menu');
+			const navLinks = document.querySelectorAll('.nav-link');
 
 			menuButton?.addEventListener('click', () => {
 				const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
 				menuButton.setAttribute('aria-expanded', (!isExpanded).toString());
 				mainMenu?.classList.toggle('show');
+				document.body.style.overflow = isExpanded ? '' : 'hidden';
+			});
+
+			// Fermer le menu lors du clic sur un lien
+			navLinks.forEach(link => {
+				link.addEventListener('click', () => {
+					menuButton?.setAttribute('aria-expanded', 'false');
+					mainMenu?.classList.remove('show');
+					document.body.style.overflow = '';
+				});
+			});
+
+			// Fermer le menu lors du redimensionnement de la fenêtre
+			window.addEventListener('resize', () => {
+				if (window.innerWidth > 768) {
+					menuButton?.setAttribute('aria-expanded', 'false');
+					mainMenu?.classList.remove('show');
+					document.body.style.overflow = '';
+				}
 			});
 
 			// Gestion du scroll to top
@@ -272,7 +294,7 @@ const { title, description = "Horizon D'Impact 3.0 - Votre partenaire pour la ge
 				right: 0;
 				background: var(--light);
 				box-shadow: var(--shadow);
-				z-index: 50;
+				z-index: 1000;
 			}
 
 			.header-container {
@@ -290,7 +312,12 @@ const { title, description = "Horizon D'Impact 3.0 - Votre partenaire pour la ge
 			}
 
 			.logo:hover {
-				opacity: 0.9;
+				transform: scale(1.05);
+			}
+
+			.logo img {
+				display: block;
+				height: auto;
 			}
 
 			/* Navigation */
@@ -303,14 +330,37 @@ const { title, description = "Horizon D'Impact 3.0 - Votre partenaire pour la ge
 				display: none;
 				background: none;
 				border: none;
-				color: var(--text);
-				cursor: pointer;
 				padding: 0.5rem;
+				cursor: pointer;
+				z-index: 1001;
+			}
+
+			.menu-icon {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				width: 24px;
+				height: 18px;
+			}
+
+			.menu-icon span {
+				display: block;
+				width: 100%;
+				height: 2px;
+				background: var(--primary);
 				transition: var(--transition);
 			}
 
-			.mobile-menu-button:hover {
-				color: var(--primary);
+			.mobile-menu-button[aria-expanded="true"] .menu-icon span:nth-child(1) {
+				transform: translateY(8px) rotate(45deg);
+			}
+
+			.mobile-menu-button[aria-expanded="true"] .menu-icon span:nth-child(2) {
+				opacity: 0;
+			}
+
+			.mobile-menu-button[aria-expanded="true"] .menu-icon span:nth-child(3) {
+				transform: translateY(-8px) rotate(-45deg);
 			}
 
 			.nav-list {
@@ -323,15 +373,34 @@ const { title, description = "Horizon D'Impact 3.0 - Votre partenaire pour la ge
 				color: var(--text);
 				text-decoration: none;
 				font-weight: 500;
-				transition: var(--transition);
 				padding: 0.5rem;
-				border-radius: var(--radius);
+				transition: var(--transition);
+				position: relative;
 			}
 
-			.nav-link:hover,
-			.nav-link[aria-current='page'] {
+			.nav-link::after {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 2px;
+				background: var(--primary);
+				transform: scaleX(0);
+				transition: var(--transition);
+			}
+
+			.nav-link:hover::after,
+			.nav-link[aria-current="page"]::after {
+				transform: scaleX(1);
+			}
+
+			.nav-link:hover {
 				color: var(--primary);
-				background: var(--gray-50);
+			}
+
+			.nav-link[aria-current="page"] {
+				color: var(--primary);
 			}
 
 			/* Main content */
@@ -452,22 +521,25 @@ const { title, description = "Horizon D'Impact 3.0 - Votre partenaire pour la ge
 
 				.nav-list {
 					position: fixed;
-					top: 4rem;
-					left: 0;
-					right: 0;
+					top: 0;
+					right: -100%;
+					width: 100%;
+					height: 100vh;
 					background: var(--light);
-					padding: 1rem;
 					flex-direction: column;
-					gap: 1rem;
-					transform: translateY(-100%);
-					opacity: 0;
+					align-items: center;
+					justify-content: center;
+					gap: 2rem;
 					transition: var(--transition);
-					box-shadow: var(--shadow);
+					z-index: 1000;
 				}
 
 				.nav-list.show {
-					transform: translateY(0);
-					opacity: 1;
+					right: 0;
+				}
+
+				.nav-link {
+					font-size: 1.25rem;
 				}
 
 				.footer-container {

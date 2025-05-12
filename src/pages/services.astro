@@ -2,13 +2,12 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Horizon D'Impact 3.0 - Nos Services">
+<Layout title="Horizon D'Impact 3.0 - Nos Services" description="Découvrez nos services d'accompagnement en gestion du personnel pour les entreprises. Solutions complètes et personnalisées.">
 	<section class="hero" data-animate>
-		<div class="hero-content">
-			<h1 class="hero-title">Nos Services</h1>
-			<p class="hero-subtitle">Des solutions complètes pour la gestion de vos ressources humaines</p>
-    </div>
-		<div class="hero-decoration"></div>
+		<div class="hero-container">
+			<h1 class="hero-title">Nos Services d'Accompagnement</h1>
+			<p class="hero-subtitle">Solutions complètes pour la gestion de vos ressources humaines</p>
+		</div>
 	</section>
 
 	<section class="services" data-animate>
@@ -16,260 +15,206 @@ import Layout from '../layouts/Layout.astro';
 			<div class="service-card">
 				<div class="service-icon">
 					<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
-                </svg>
-              </div>
-				<h2 class="service-title">1. Projets clés en main</h2>
-				<ul class="service-features">
-					<li class="service-feature">
-						<svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-						</svg>
-						<span>Conception du projet</span>
-					</li>
-					<li class="service-feature">
-						<svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-						</svg>
-						<span>Etude de marché et faisabilité</span>
-					</li>
-					<li class="service-feature">
-						<svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-						</svg>
-						<span>Analyse et évaluation des projets</span>
-					</li>
-					<li class="service-feature">
-						<svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-						</svg>
-						<span>Réalisation des plans d'affaires</span>
-					</li>
-				</ul>
-            </div>
-
-			<div class="service-card">
-				<div class="service-icon">
-					<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                  </svg>
-                </div>
-				<h2 class="service-title">2. Gestion des ressources humaines</h2>
-				<ul class="service-features">
-					<li class="service-feature">
-						<svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-						</svg>
-						<span>Formation du personnel & renforcement de compétences</span>
-					</li>
-					<li class="service-feature">
-						<svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-						</svg>
-						<span>Gestion et management de carrière</span>
-					</li>
-					<li class="service-feature">
-						<svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-						</svg>
-						<span>Intégration et motivation des jeunes talents</span>
-					</li>
+					</svg>
+				</div>
+				<h2 class="service-title">Administration du Personnel</h2>
+				<ul class="service-list">
+					<li>Élaboration des contrats de travail</li>
+					<li>Calculs des absences</li>
+					<li>Préparation des congés</li>
+					<li>Calcul des salaires et élaboration des fiches de paie</li>
+					<li>Gestion des contrats de travail</li>
+					<li>Suivi des absences et congés</li>
 				</ul>
-                </div>
+			</div>
 
 			<div class="service-card">
 				<div class="service-icon">
 					<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                  </svg>
-                </div>
-				<h2 class="service-title">3. Administration du personnel</h2>
-				<ul class="service-features">
-					<li class="service-feature">
-						<svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-						</svg>
-						<span>Contrats de travail, fiches de paie, conformité légale</span>
+					</svg>
+				</div>
+				<h2 class="service-title">Déclaration Fiscale et CNPS</h2>
+				<ul class="service-list">
+					<li>Immatriculation à la CNPS et suivi des déclarations mensuelles
+						<ul class="service-sublist">
+							<li>Immatriculation de chaque employé à la CNPS</li>
+							<li>Déclaration mensuelle CNPS de chaque employé</li>
+						</ul>
 					</li>
-					<li class="service-feature">
-						<svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-						</svg>
-						<span>Accompagnement sur la déclaration CNPS</span>
-					</li>
-					<li class="service-feature">
-						<svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                  </svg>
-						<span>Audit RH & optimisation de la gestion salariale</span>
+					<li>Déclaration des impôts et taxes
+						<ul class="service-sublist">
+							<li>Impôt sur le revenu de la personne physique (IRPP)</li>
+							<li>Impôts sur les Sociétés (IS)</li>
+							<li>DSF</li>
+						</ul>
 					</li>
 				</ul>
-        </div>
+			</div>
 
 			<div class="service-card">
 				<div class="service-icon">
 					<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                </svg>
-              </div>
-				<h2 class="service-title">4. Stratégie RH & développement des talents</h2>
-				<ul class="service-features">
-					<li class="service-feature">
-						<svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-						</svg>
-						<span>Programmes de formation sur mesure</span>
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+					</svg>
+				</div>
+				<h2 class="service-title">Développement des Compétences</h2>
+				<ul class="service-list">
+					<li>Formation des nouvelles ressources aux outils de gestion
+						<ul class="service-sublist">
+							<li>Excel, Word, PowerPoint, Power BI</li>
+						</ul>
 					</li>
-					<li class="service-feature">
-						<svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-						</svg>
-						<span>Coaching et mentoring des jeunes employés</span>
-					</li>
-					<li class="service-feature">
-						<svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-						</svg>
-						<span>Accompagnement pour une meilleure organisation RH</span>
+					<li>Formations à la mise à niveau des compétences
+						<ul class="service-sublist">
+							<li>Techniques de vente</li>
+							<li>Gestion des équipes</li>
+						</ul>
 					</li>
 				</ul>
-            </div>
+			</div>
 
 			<div class="service-card">
 				<div class="service-icon">
 					<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                  </svg>
-                </div>
-				<h2 class="service-title">5. Autres prestations</h2>
-				<ul class="service-features">
-					<li class="service-feature">
-						<svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-						</svg>
-						<span>Service évènementiel (service café, service traiteur, location chaises, tentes et décoration etc...)</span>
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+					</svg>
+				</div>
+				<h2 class="service-title">Gestion Prévisionnelle des Emplois et Carrières</h2>
+				<ul class="service-list">
+					<li>Planification des carrières
+						<ul class="service-sublist">
+							<li>Planification des emplois présents et futurs selon les besoins de l'employeur</li>
+							<li>Planification des recrutements</li>
+							<li>Planification des objectifs clés des salariés</li>
+						</ul>
 					</li>
 				</ul>
-                </div>
-              </div>
+			</div>
+		</div>
 	</section>
 
-	<section class="why-us" data-animate>
-		<div class="why-us-container">
-			<h2 class="section-title">Pourquoi nous choisir ?</h2>
-			<div class="benefits-grid">
-				<div class="benefit-card">
-					<div class="benefit-icon">
-						<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                  </svg>
-                </div>
-					<h3 class="benefit-title">Spécialiste des PME</h3>
-					<p class="benefit-description">Expertise approfondie des défis RH locaux</p>
-                </div>
+	<section class="pricing" data-animate>
+		<div class="pricing-container">
+			<h2 class="section-title">Nos Packs de Services</h2>
+			<div class="pricing-grid">
+				<div class="pricing-card">
+					<div class="pricing-header">
+						<h3 class="pricing-title">Pack 1</h3>
+						<p class="pricing-subtitle">1-15 Employés</p>
+						<div class="pricing-price">
+							<span class="price">400.000 FCFA</span>
+							<span class="period">/ trimestre</span>
+						</div>
+					</div>
+					<ul class="pricing-features">
+						<li>Gestion des ressources humaines</li>
+						<li>Administration du personnel</li>
+						<li>Déclaration fiscale</li>
+						<li>Déclaration CNPS</li>
+						<li>Immatriculation CNPS</li>
+						<li>Développement des compétences</li>
+						<li>Gestion prévisionnelle des emplois</li>
+						<li>1 formation au choix</li>
+					</ul>
+					<a href="/contact" class="pricing-button">Choisir ce pack</a>
+				</div>
 
-				<div class="benefit-card">
-					<div class="benefit-icon">
-						<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-					<h3 class="benefit-title">Approche personnalisée</h3>
-					<p class="benefit-description">Solutions 100% adaptées à votre secteur d'activité</p>
-                </div>
+				<div class="pricing-card featured">
+					<div class="pricing-header">
+						<h3 class="pricing-title">Pack 2</h3>
+						<p class="pricing-subtitle">1-30 Employés</p>
+						<div class="pricing-price">
+							<span class="price">700.000 FCFA</span>
+							<span class="period">/ trimestre</span>
+						</div>
+					</div>
+					<ul class="pricing-features">
+						<li>Tous les services du Pack 1</li>
+						<li>Support prioritaire</li>
+						<li>Accompagnement personnalisé</li>
+						<li>1 formation au choix</li>
+					</ul>
+					<a href="/contact" class="pricing-button">Choisir ce pack</a>
+				</div>
 
-				<div class="benefit-card">
-					<div class="benefit-icon">
-						<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-						</svg>
-              </div>
-					<h3 class="benefit-title">Gain de temps</h3>
-					<p class="benefit-description">Optimisation de votre productivité</p>
-        </div>
+				<div class="pricing-card">
+					<div class="pricing-header">
+						<h3 class="pricing-title">Pack 3</h3>
+						<p class="pricing-subtitle">30-50 Employés</p>
+						<div class="pricing-price">
+							<span class="price">1.500.000 FCFA</span>
+							<span class="period">/ trimestre</span>
+						</div>
+					</div>
+					<ul class="pricing-features">
+						<li>Tous les services du Pack 2</li>
+						<li>2 formations (employeur ou employé)</li>
+						<li>Gestion de la comptabilité</li>
+						<li>Support dédié</li>
+					</ul>
+					<a href="/contact" class="pricing-button">Choisir ce pack</a>
+				</div>
 
-				<div class="benefit-card">
-					<div class="benefit-icon">
-						<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
-              </div>
-					<h3 class="benefit-title">Équipe expérimentée</h3>
-					<p class="benefit-description">Professionnels engagés à votre service</p>
-            </div>
-
-				<div class="benefit-card">
-					<div class="benefit-icon">
-						<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                  </svg>
-                </div>
-					<h3 class="benefit-title">Flexibilité</h3>
-					<p class="benefit-description">Solutions adaptées à vos besoins</p>
-        </div>
-      </div>
-    </div>
-  </section>
+				<div class="pricing-card">
+					<div class="pricing-header">
+						<h3 class="pricing-title">Pack 4</h3>
+						<p class="pricing-subtitle">+50 Employés</p>
+						<div class="pricing-price">
+							<span class="price">Sur mesure</span>
+						</div>
+					</div>
+					<ul class="pricing-features">
+						<li>Solution personnalisée</li>
+						<li>Accompagnement sur mesure</li>
+						<li>Formations illimitées</li>
+						<li>Support 24/7</li>
+					</ul>
+					<a href="/contact" class="pricing-button">Contactez-nous</a>
+				</div>
+			</div>
+		</div>
+	</section>
 
 	<section class="cta" data-animate>
 		<div class="cta-container">
-			<h2 class="section-title">FAITES LE CHOIX DE LA PERFORMANCE RH</h2>
-			<p class="cta-text">Contactez-nous aujourd'hui pour un diagnostic RH et pour évaluer votre affaire gratuitement</p>
-			<div class="cta-buttons">
-				<a href="/contact" class="cta-button primary">Contactez-nous</a>
-      </div>
-    </div>
-  </section>
-</Layout> 
+			<h2 class="cta-title">Prêt à optimiser vos ressources humaines ?</h2>
+			<p class="cta-text">Contactez-nous dès aujourd'hui pour un diagnostic RH gratuit.</p>
+			<a href="/contact" class="cta-button">Nous contacter</a>
+		</div>
+	</section>
+</Layout>
 
 <style>
 	/* Hero Section */
 	.hero {
-		position: relative;
-		min-height: 40vh;
-		background: linear-gradient(120deg, var(--primary) 0%, var(--secondary) 100%);
+		background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
 		color: var(--light);
-		padding: 6rem 1rem 4rem;
-		overflow: hidden;
-		display: flex;
-		align-items: center;
-		justify-content: center;
+		padding: 6rem 1rem;
 		text-align: center;
 	}
 
-	.hero-content {
+	.hero-container {
 		max-width: 800px;
-		position: relative;
-		z-index: 2;
+		margin: 0 auto;
 	}
 
 	.hero-title {
-		font-size: clamp(2rem, 5vw, 3.5rem);
+		font-size: 2.5rem;
 		font-weight: 800;
-		margin-bottom: 1.5rem;
-		line-height: 1.2;
+		margin-bottom: 1rem;
 	}
 
 	.hero-subtitle {
-		font-size: clamp(1.1rem, 2vw, 1.3rem);
-		margin-bottom: 2.5rem;
-		opacity: 0.9;
-	}
-
-	.hero-decoration {
-		position: absolute;
-		inset: 0;
-		background: url('data:image/svg+xml;utf8,<svg width="1440" height="900" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity="0.12"><circle cx="300" cy="400" r="100" fill="%233949ab"/><circle cx="900" cy="200" r="60" fill="%231a237e"/><circle cx="1200" cy="600" r="40" fill="%233949ab"/><path d="M0 800L1440 100" stroke="%233949ab" stroke-width="2"/><path d="M0 600L1440 300" stroke="%231a237e" stroke-width="2"/></g></svg>');
-		background-size: cover;
-		background-position: center;
-		filter: blur(2px) brightness(1.1);
+		font-size: 1.25rem;
 		opacity: 0.9;
 	}
 
 	/* Services Section */
 	.services {
 		padding: 5rem 1rem;
-		background: var(--light);
+		background: var(--gray-50);
 	}
 
 	.services-container {
@@ -281,123 +226,159 @@ import Layout from '../layouts/Layout.astro';
 	}
 
 	.service-card {
-		background: white;
-		border-radius: 1rem;
+		background: var(--light);
 		padding: 2rem;
-		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-		transition: transform 0.3s ease;
+		border-radius: var(--radius);
+		box-shadow: var(--shadow);
+		transition: var(--transition);
 	}
 
 	.service-card:hover {
 		transform: translateY(-5px);
+		box-shadow: var(--shadow-lg);
 	}
 
 	.service-icon {
-		width: 4rem;
-		height: 4rem;
+		color: var(--primary);
 		margin-bottom: 1.5rem;
-		background: var(--primary);
-		color: white;
-		border-radius: 50%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
 	}
 
 	.service-title {
-		color: var(--primary);
-		font-size: 1.2rem;
+		font-size: 1.5rem;
 		font-weight: 700;
-		margin-bottom: 1rem;
-	}
-
-	.service-features {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-	}
-
-	.service-feature {
-		display: flex;
-		align-items: center;
-		gap: 0.75rem;
-		margin-bottom: 0.8rem;
 		color: var(--text);
+		margin-bottom: 1.5rem;
 	}
 
-	.check-icon {
-		width: 1.25rem;
-		height: 1.25rem;
-		color: var(--accent);
-		flex-shrink: 0;
+	.service-list {
+		list-style: none;
 	}
 
-	/* Why Us Section */
-	.why-us {
+	.service-list li {
+		margin-bottom: 1rem;
+		color: var(--text-light);
+	}
+
+	.service-sublist {
+		list-style: disc;
+		margin-left: 1.5rem;
+		margin-top: 0.5rem;
+	}
+
+	/* Pricing Section */
+	.pricing {
 		padding: 5rem 1rem;
-		background: #f8fafc;
+		background: var(--light);
 	}
 
-	.why-us-container {
+	.pricing-container {
 		max-width: 1200px;
 		margin: 0 auto;
 	}
 
 	.section-title {
-		color: var(--primary);
-		font-size: clamp(1.8rem, 4vw, 2.5rem);
-		font-weight: 800;
-		margin-bottom: 3rem;
 		text-align: center;
+		font-size: 2.5rem;
+		font-weight: 700;
+		color: var(--primary);
+		margin-bottom: 3rem;
 	}
 
-	.benefits-grid {
+	.pricing-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 		gap: 2rem;
 	}
 
-	.benefit-card {
-		background: white;
+	.pricing-card {
+		background: var(--light);
+		border-radius: var(--radius);
+		box-shadow: var(--shadow);
 		padding: 2rem;
-		border-radius: 1rem;
-		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-		text-align: center;
-		transition: transform 0.3s ease;
+		transition: var(--transition);
+		border: 2px solid transparent;
 	}
 
-	.benefit-card:hover {
+	.pricing-card.featured {
+		border-color: var(--primary);
+		transform: scale(1.05);
+	}
+
+	.pricing-card:hover {
 		transform: translateY(-5px);
+		box-shadow: var(--shadow-lg);
 	}
 
-	.benefit-icon {
-		width: 4rem;
-		height: 4rem;
-		margin: 0 auto 1.5rem;
-		background: var(--primary);
-		color: white;
-		border-radius: 50%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
+	.pricing-card.featured:hover {
+		transform: scale(1.05) translateY(-5px);
 	}
 
-	.benefit-title {
-		color: var(--primary);
-		font-size: 1.2rem;
+	.pricing-header {
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+
+	.pricing-title {
+		font-size: 1.5rem;
 		font-weight: 700;
+		color: var(--text);
 		margin-bottom: 0.5rem;
 	}
 
-	.benefit-description {
-		color: var(--text);
-		opacity: 0.8;
+	.pricing-subtitle {
+		color: var(--text-light);
+		margin-bottom: 1rem;
+	}
+
+	.pricing-price {
+		font-size: 2rem;
+		font-weight: 800;
+		color: var(--primary);
+	}
+
+	.pricing-price .period {
+		font-size: 1rem;
+		font-weight: 400;
+		color: var(--text-light);
+	}
+
+	.pricing-features {
+		list-style: none;
+		margin-bottom: 2rem;
+	}
+
+	.pricing-features li {
+		padding: 0.75rem 0;
+		color: var(--text-light);
+		border-bottom: 1px solid var(--gray-200);
+	}
+
+	.pricing-features li:last-child {
+		border-bottom: none;
+	}
+
+	.pricing-button {
+		display: block;
+		width: 100%;
+		padding: 1rem;
+		background: var(--primary);
+		color: var(--light);
+		text-align: center;
+		text-decoration: none;
+		border-radius: var(--radius);
+		font-weight: 600;
+		transition: var(--transition);
+	}
+
+	.pricing-button:hover {
+		background: var(--primary-dark);
+		transform: translateY(-2px);
 	}
 
 	/* CTA Section */
 	.cta {
 		padding: 5rem 1rem;
-		background: linear-gradient(120deg, var(--primary) 0%, var(--secondary) 100%);
+		background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
 		color: var(--light);
 		text-align: center;
 	}
@@ -407,61 +388,36 @@ import Layout from '../layouts/Layout.astro';
 		margin: 0 auto;
 	}
 
-	.cta-text {
-		font-size: 1.2rem;
-		margin-bottom: 2.5rem;
-		opacity: 0.9;
+	.cta-title {
+		font-size: 2.5rem;
+		font-weight: 700;
+		margin-bottom: 1.5rem;
 	}
 
-	.cta-buttons {
-		display: flex;
-		gap: 1rem;
-		justify-content: center;
-		flex-wrap: wrap;
+	.cta-text {
+		font-size: 1.25rem;
+		opacity: 0.9;
+		margin-bottom: 2.5rem;
 	}
 
 	.cta-button {
 		display: inline-block;
-		padding: 1rem 2rem;
-		border-radius: 0.5rem;
-		font-weight: 600;
+		padding: 1rem 2.5rem;
+		background: var(--light);
+		color: var(--primary);
 		text-decoration: none;
-		transition: transform 0.3s ease, box-shadow 0.3s ease;
+		border-radius: var(--radius);
+		font-weight: 600;
+		transition: var(--transition);
 	}
 
 	.cta-button:hover {
+		background: var(--gray-100);
 		transform: translateY(-2px);
-		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-	}
-
-	.cta-button.primary {
-		background: var(--accent);
-		color: var(--primary);
 	}
 
 	/* Responsive Design */
-	@media (max-width: 1024px) {
-		.services-container {
-			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-		}
-	}
-
 	@media (max-width: 768px) {
-		.hero {
-			min-height: 30vh;
-			padding: 4rem 1rem 3rem;
-		}
-
-		.benefits-grid {
-			grid-template-columns: 1fr;
-		}
-
-		.cta-button {
-			width: 100%;
-		}
-	}
-
-	@media (max-width: 480px) {
 		.hero-title {
 			font-size: 2rem;
 		}
@@ -471,12 +427,23 @@ import Layout from '../layouts/Layout.astro';
 		}
 
 		.section-title {
-			font-size: 1.8rem;
+			font-size: 2rem;
 		}
 
-		.service-card,
-		.benefit-card {
-			padding: 1.5rem;
+		.pricing-card.featured {
+			transform: none;
+		}
+
+		.pricing-card.featured:hover {
+			transform: translateY(-5px);
+		}
+
+		.cta-title {
+			font-size: 2rem;
+		}
+
+		.cta-text {
+			font-size: 1.1rem;
 		}
 	}
 </style> 
