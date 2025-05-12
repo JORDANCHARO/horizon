@@ -6,69 +6,44 @@ import Layout from '../layouts/Layout.astro';
 	<section class="hero" data-animate>
 		<div class="hero-content">
 			<h1 class="hero-title">Nos Services</h1>
-			<p class="hero-subtitle">Nous accompagnons les PME et les jeunes talents dans leur développement professionnel.</p>
+			<p class="hero-subtitle">Des solutions complètes pour la gestion de vos ressources humaines</p>
 		</div>
 		<div class="hero-decoration"></div>
 	</section>
 
 	<section class="services" data-animate>
-		<div class="services-grid">
+		<div class="services-container">
 			<div class="service-card">
 				<div class="service-icon">
 					<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
 					</svg>
 				</div>
-				<h2 class="service-title">Accompagnement des PME</h2>
-				<p class="service-description">Nous aidons les PME à identifier, former et intégrer les meilleurs jeunes talents pour leur croissance.</p>
+				<h2 class="service-title">1. Projets clés en main</h2>
 				<ul class="service-features">
 					<li class="service-feature">
 						<svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
 						</svg>
-						<span>Identification des besoins en compétences</span>
+						<span>Conception du projet</span>
 					</li>
 					<li class="service-feature">
 						<svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
 						</svg>
-						<span>Recrutement de jeunes talents</span>
+						<span>Etude de marché et faisabilité</span>
 					</li>
 					<li class="service-feature">
 						<svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
 						</svg>
-						<span>Suivi post-intégration</span>
-					</li>
-				</ul>
-			</div>
-
-			<div class="service-card">
-				<div class="service-icon">
-					<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-					</svg>
-				</div>
-				<h2 class="service-title">Formation des jeunes</h2>
-				<p class="service-description">Nous formons les jeunes talents aux compétences recherchées par les entreprises d'aujourd'hui.</p>
-				<ul class="service-features">
-					<li class="service-feature">
-						<svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-						</svg>
-						<span>Formation aux compétences techniques</span>
+						<span>Analyse et évaluation des projets</span>
 					</li>
 					<li class="service-feature">
 						<svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
 						</svg>
-						<span>Développement des soft skills</span>
-					</li>
-					<li class="service-feature">
-						<svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-						</svg>
-						<span>Préparation à l'insertion professionnelle</span>
+						<span>Réalisation des plans d'affaires</span>
 					</li>
 				</ul>
 			</div>
@@ -79,26 +54,100 @@ import Layout from '../layouts/Layout.astro';
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
 					</svg>
 				</div>
-				<h2 class="service-title">Intégration professionnelle</h2>
-				<p class="service-description">Nous assurons un suivi personnalisé pour une intégration réussie dans l'entreprise.</p>
+				<h2 class="service-title">2. Gestion des ressources humaines</h2>
 				<ul class="service-features">
 					<li class="service-feature">
 						<svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
 						</svg>
-						<span>Accompagnement personnalisé</span>
+						<span>Formation du personnel & renforcement de compétences</span>
 					</li>
 					<li class="service-feature">
 						<svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
 						</svg>
-						<span>Suivi régulier</span>
+						<span>Gestion et management de carrière</span>
 					</li>
 					<li class="service-feature">
 						<svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
 						</svg>
-						<span>Évaluation des performances</span>
+						<span>Intégration et motivation des jeunes talents</span>
+					</li>
+				</ul>
+			</div>
+
+			<div class="service-card">
+				<div class="service-icon">
+					<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+					</svg>
+				</div>
+				<h2 class="service-title">3. Administration du personnel</h2>
+				<ul class="service-features">
+					<li class="service-feature">
+						<svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+						</svg>
+						<span>Contrats de travail, fiches de paie, conformité légale</span>
+					</li>
+					<li class="service-feature">
+						<svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+						</svg>
+						<span>Accompagnement sur la déclaration CNPS</span>
+					</li>
+					<li class="service-feature">
+						<svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+						</svg>
+						<span>Audit RH & optimisation de la gestion salariale</span>
+					</li>
+				</ul>
+			</div>
+
+			<div class="service-card">
+				<div class="service-icon">
+					<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+					</svg>
+				</div>
+				<h2 class="service-title">4. Stratégie RH & développement des talents</h2>
+				<ul class="service-features">
+					<li class="service-feature">
+						<svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+						</svg>
+						<span>Programmes de formation sur mesure</span>
+					</li>
+					<li class="service-feature">
+						<svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+						</svg>
+						<span>Coaching et mentoring des jeunes employés</span>
+					</li>
+					<li class="service-feature">
+						<svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+						</svg>
+						<span>Accompagnement pour une meilleure organisation RH</span>
+					</li>
+				</ul>
+			</div>
+
+			<div class="service-card">
+				<div class="service-icon">
+					<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+					</svg>
+				</div>
+				<h2 class="service-title">5. Autres prestations</h2>
+				<ul class="service-features">
+					<li class="service-feature">
+						<svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+						</svg>
+						<span>Service évènementiel (service café, service traiteur, location chaises, tentes et décoration etc...)</span>
 					</li>
 				</ul>
 			</div>
@@ -106,7 +155,7 @@ import Layout from '../layouts/Layout.astro';
 	</section>
 
 	<section class="why-us" data-animate>
-		<div class="why-us-content">
+		<div class="why-us-container">
 			<h2 class="section-title">Pourquoi nous choisir ?</h2>
 			<div class="benefits-grid">
 				<div class="benefit-card">
@@ -115,26 +164,48 @@ import Layout from '../layouts/Layout.astro';
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
 						</svg>
 					</div>
-					<h3 class="benefit-title">Expertise</h3>
-					<p class="benefit-description">Une équipe experte dans l'accompagnement des PME et la formation des jeunes talents.</p>
+					<h3 class="benefit-title">Spécialiste des PME</h3>
+					<p class="benefit-description">Expertise approfondie des défis RH locaux</p>
 				</div>
+
 				<div class="benefit-card">
 					<div class="benefit-icon">
 						<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
 						</svg>
 					</div>
-					<h3 class="benefit-title">Personnalisation</h3>
-					<p class="benefit-description">Des solutions adaptées aux besoins spécifiques de chaque PME et chaque jeune talent.</p>
+					<h3 class="benefit-title">Approche personnalisée</h3>
+					<p class="benefit-description">Solutions 100% adaptées à votre secteur d'activité</p>
 				</div>
+
 				<div class="benefit-card">
 					<div class="benefit-icon">
 						<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
 						</svg>
 					</div>
-					<h3 class="benefit-title">Suivi</h3>
-					<p class="benefit-description">Un accompagnement continu pour garantir la réussite de l'intégration.</p>
+					<h3 class="benefit-title">Gain de temps</h3>
+					<p class="benefit-description">Optimisation de votre productivité</p>
+				</div>
+
+				<div class="benefit-card">
+					<div class="benefit-icon">
+						<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+						</svg>
+					</div>
+					<h3 class="benefit-title">Équipe expérimentée</h3>
+					<p class="benefit-description">Professionnels engagés à votre service</p>
+				</div>
+
+				<div class="benefit-card">
+					<div class="benefit-icon">
+						<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+						</svg>
+					</div>
+					<h3 class="benefit-title">Flexibilité</h3>
+					<p class="benefit-description">Solutions adaptées à vos besoins</p>
 				</div>
 			</div>
 		</div>
@@ -142,11 +213,10 @@ import Layout from '../layouts/Layout.astro';
 
 	<section class="cta" data-animate>
 		<div class="cta-container">
-			<h2 class="section-title">Prêt à commencer ?</h2>
-			<p class="cta-text">Que vous soyez une PME ou un jeune talent, nous sommes là pour vous accompagner dans votre développement.</p>
+			<h2 class="section-title">FAITES LE CHOIX DE LA PERFORMANCE RH</h2>
+			<p class="cta-text">Contactez-nous aujourd'hui pour un diagnostic RH et pour évaluer votre affaire gratuitement</p>
 			<div class="cta-buttons">
-				<a href="/contact" class="cta-button primary">Je suis une PME</a>
-				<a href="/contact" class="cta-button secondary">Je suis un jeune talent</a>
+				<a href="/contact" class="cta-button primary">Contactez-nous</a>
 			</div>
 		</div>
 	</section>
@@ -202,7 +272,7 @@ import Layout from '../layouts/Layout.astro';
 		background: var(--light);
 	}
 
-	.services-grid {
+	.services-container {
 		max-width: 1200px;
 		margin: 0 auto;
 		display: grid;
@@ -236,15 +306,9 @@ import Layout from '../layouts/Layout.astro';
 
 	.service-title {
 		color: var(--primary);
-		font-size: 1.5rem;
+		font-size: 1.2rem;
 		font-weight: 700;
 		margin-bottom: 1rem;
-	}
-
-	.service-description {
-		color: var(--text);
-		margin-bottom: 1.5rem;
-		opacity: 0.8;
 	}
 
 	.service-features {
@@ -270,11 +334,11 @@ import Layout from '../layouts/Layout.astro';
 
 	/* Why Us Section */
 	.why-us {
-		background: #fffde7;
 		padding: 5rem 1rem;
+		background: #f8fafc;
 	}
 
-	.why-us-content {
+	.why-us-container {
 		max-width: 1200px;
 		margin: 0 auto;
 	}
@@ -294,11 +358,11 @@ import Layout from '../layouts/Layout.astro';
 	}
 
 	.benefit-card {
-		text-align: center;
-		padding: 2rem;
 		background: white;
+		padding: 2rem;
 		border-radius: 1rem;
 		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		text-align: center;
 		transition: transform 0.3s ease;
 	}
 
@@ -322,7 +386,7 @@ import Layout from '../layouts/Layout.astro';
 		color: var(--primary);
 		font-size: 1.2rem;
 		font-weight: 700;
-		margin-bottom: 1rem;
+		margin-bottom: 0.5rem;
 	}
 
 	.benefit-description {
@@ -375,26 +439,21 @@ import Layout from '../layouts/Layout.astro';
 		color: var(--primary);
 	}
 
-	.cta-button.secondary {
-		background: transparent;
-		color: var(--light);
-		border: 2px solid var(--light);
+	/* Responsive Design */
+	@media (max-width: 1024px) {
+		.services-container {
+			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		}
 	}
 
-	/* Responsive Design */
 	@media (max-width: 768px) {
 		.hero {
 			min-height: 30vh;
 			padding: 4rem 1rem 3rem;
 		}
 
-		.services-grid,
 		.benefits-grid {
 			grid-template-columns: 1fr;
-		}
-
-		.cta-buttons {
-			flex-direction: column;
 		}
 
 		.cta-button {

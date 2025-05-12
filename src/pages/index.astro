@@ -8,144 +8,220 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="Horizon D'Impact 3.0 - Accueil">
 	<section class="hero" data-animate>
 		<div class="hero-content">
-			<h1 class="hero-title">Votre impact digital commence ici</h1>
-			<p class="hero-subtitle">Nous accompagnons les PME et les jeunes talents dans leur développement professionnel, avec une approche humaine et durable.</p>
-			<a href="/contact" class="cta-button">Contactez-nous</a>
+			<h1 class="hero-title">HORIZON D'IMPACT 3.0</h1>
+			<p class="hero-subtitle">BOOSTEZ LA GESTION DE VOTRE PERSONNEL, FAITES DÉCOLLER VOTRE PME!</p>
+			<div class="hero-buttons">
+				<a href="/contact" class="cta-button primary">Contactez-nous</a>
+				<a href="/services" class="cta-button secondary">Nos services</a>
+			</div>
 		</div>
 		<div class="hero-decoration"></div>
 	</section>
 
-	<section class="features" data-animate>
-		<div class="features-grid">
-			<div class="feature-card">
-				<div class="feature-icon">
-					<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-					</svg>
+	<section class="about" data-animate>
+		<div class="about-container">
+			<h2 class="section-title">Qui sommes-nous ?</h2>
+			<p class="about-text">
+				HORIZON IMPACT 3.0 est un cabinet spécialisé dans l'accompagnement des entreprises de la phase de conception d'un projet à sa matérialisation et pour une gestion optimale de leurs ressources humaines. Nous aidons les PME à concevoir, mettre en place et structurer leurs entreprises et aussi optimiser et valoriser leur capital humain.
+			</p>
+		</div>
+	</section>
+
+	<section class="expertise" data-animate>
+		<div class="expertise-container">
+			<h2 class="section-title">NOS DOMAINES D'EXPERTISE</h2>
+			<div class="expertise-grid">
+				<div class="expertise-card">
+					<div class="expertise-icon">
+						<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+						</svg>
+					</div>
+					<h3 class="expertise-title">CONSEIL & ACCOMPAGNEMENT RH</h3>
+					<ul class="expertise-list">
+						<li>Audit et diagnostic RH</li>
+						<li>Conformité réglementaire et légale</li>
+						<li>Politiques et stratégies de gestion du personnel</li>
+					</ul>
 				</div>
-				<h2 class="feature-title">Accompagnement des PME</h2>
-				<p class="feature-description">Nous aidons les PME à identifier, former et intégrer les meilleurs jeunes talents pour leur croissance.</p>
-			</div>
-			<div class="feature-card">
-				<div class="feature-icon">
-					<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-					</svg>
+
+				<div class="expertise-card">
+					<div class="expertise-icon">
+						<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+						</svg>
+					</div>
+					<h3 class="expertise-title">ADMINISTRATION DU PERSONNEL</h3>
+					<ul class="expertise-list">
+						<li>Gestion des contrats et paie</li>
+						<li>Déclarations CNPS et conformité</li>
+						<li>Organisation et optimisation de la masse salariale</li>
+					</ul>
 				</div>
-				<h2 class="feature-title">Formation des jeunes</h2>
-				<p class="feature-description">Nous formons les jeunes talents aux compétences recherchées par les entreprises d'aujourd'hui.</p>
-			</div>
-			<div class="feature-card">
-				<div class="feature-icon">
-					<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-					</svg>
+
+				<div class="expertise-card">
+					<div class="expertise-icon">
+						<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+						</svg>
+					</div>
+					<h3 class="expertise-title">FORMATION & DÉVELOPPEMENT DES COMPÉTENCES</h3>
+					<ul class="expertise-list">
+						<li>Plans de formation adaptés aux besoins des PME</li>
+						<li>Coaching en management et leadership</li>
+						<li>Intégration et accompagnement des jeunes talents</li>
+					</ul>
 				</div>
-				<h2 class="feature-title">Intégration professionnelle</h2>
-				<p class="feature-description">Nous assurons un suivi personnalisé pour une intégration réussie dans l'entreprise.</p>
 			</div>
 		</div>
 	</section>
 
-	<section class="why-us" data-animate>
-		<div class="why-us-content">
-			<h2 class="section-title">Pourquoi choisir Horizon Impact ?</h2>
-			<ul class="benefits-list">
-				<li class="benefit-item">
-					<span class="benefit-icon">✔️</span>
-					<span class="benefit-text">Expertise en recrutement et formation des jeunes talents</span>
-				</li>
-				<li class="benefit-item">
-					<span class="benefit-icon">✔️</span>
-					<span class="benefit-text">Accompagnement personnalisé des PME et des jeunes</span>
-				</li>
-				<li class="benefit-item">
-					<span class="benefit-icon">✔️</span>
-					<span class="benefit-text">Suivi post-intégration pour garantir la réussite</span>
-				</li>
-				<li class="benefit-item">
-					<span class="benefit-icon">✔️</span>
-					<span class="benefit-text">Approche humaine et durable</span>
-				</li>
-			</ul>
+	<section class="value" data-animate>
+		<div class="value-container">
+			<h2 class="section-title">NOTRE VALEUR AJOUTÉE</h2>
+			<div class="value-grid">
+				<div class="value-card">
+					<div class="value-icon">
+						<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+						</svg>
+					</div>
+					<p class="value-text">Une expertise locale et sectorielle pointue</p>
+				</div>
+
+				<div class="value-card">
+					<div class="value-icon">
+						<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+						</svg>
+					</div>
+					<p class="value-text">Une approche sur mesure pour chaque entreprise</p>
+				</div>
+
+				<div class="value-card">
+					<div class="value-icon">
+						<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+						</svg>
+					</div>
+					<p class="value-text">Un réel levier de croissance pour votre PME</p>
+				</div>
+
+				<div class="value-card">
+					<div class="value-icon">
+						<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+						</svg>
+					</div>
+					<p class="value-text">Un accompagnement adapté aux enjeux de la digitalisation RH</p>
+				</div>
+			</div>
 		</div>
 	</section>
 
 	<section class="services" data-animate>
 		<div class="services-container">
-			<h2 class="section-title">Nos Services</h2>
+			<h2 class="section-title">NOS SERVICES</h2>
 			<div class="services-grid">
 				<div class="service-card">
-					<div class="service-header">
-						<div class="service-icon">
-							<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-							</svg>
-						</div>
-						<h3 class="service-title">Pour les PME</h3>
-					</div>
+					<h3 class="service-title">1. Projets clés en main</h3>
 					<ul class="service-list">
-						<li class="service-item">
-							<svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-							</svg>
-							<span>Identification des besoins en compétences</span>
-						</li>
-						<li class="service-item">
-							<svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-							</svg>
-							<span>Recrutement de jeunes talents</span>
-						</li>
-						<li class="service-item">
-							<svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-							</svg>
-							<span>Formation sur mesure</span>
-						</li>
-						<li class="service-item">
-							<svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-							</svg>
-							<span>Suivi de l'intégration</span>
-						</li>
+						<li>Conception du projet</li>
+						<li>Etude de marché et faisabilité</li>
+						<li>Analyse et évaluation des projets</li>
+						<li>Réalisation des plans d'affaires</li>
 					</ul>
 				</div>
+
 				<div class="service-card">
-					<div class="service-header">
-						<div class="service-icon">
-							<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-							</svg>
-						</div>
-						<h3 class="service-title">Pour les jeunes talents</h3>
-					</div>
+					<h3 class="service-title">2. Gestion des ressources humaines</h3>
 					<ul class="service-list">
-						<li class="service-item">
-							<svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-							</svg>
-							<span>Formation professionnelle</span>
-						</li>
-						<li class="service-item">
-							<svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-							</svg>
-							<span>Accompagnement personnalisé</span>
-						</li>
-						<li class="service-item">
-							<svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-							</svg>
-							<span>Mise en relation avec des PME</span>
-						</li>
-						<li class="service-item">
-							<svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-							</svg>
-							<span>Suivi post-embauche</span>
-						</li>
+						<li>Formation du personnel & renforcement de compétences</li>
+						<li>Gestion et management de carrière</li>
+						<li>Intégration et motivation des jeunes talents</li>
 					</ul>
+				</div>
+
+				<div class="service-card">
+					<h3 class="service-title">3. Administration du personnel</h3>
+					<ul class="service-list">
+						<li>Contrats de travail, fiches de paie, conformité légale</li>
+						<li>Accompagnement sur la déclaration CNPS</li>
+						<li>Audit RH & optimisation de la gestion salariale</li>
+					</ul>
+				</div>
+
+				<div class="service-card">
+					<h3 class="service-title">4. Stratégie RH & développement des talents</h3>
+					<ul class="service-list">
+						<li>Programmes de formation sur mesure</li>
+						<li>Coaching et mentoring des jeunes employés</li>
+						<li>Accompagnement pour une meilleure organisation RH</li>
+					</ul>
+				</div>
+
+				<div class="service-card">
+					<h3 class="service-title">5. Autres prestations</h3>
+					<ul class="service-list">
+						<li>Service évènementiel (service café, service traiteur, location chaises, tentes et décoration etc...)</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="why-us" data-animate>
+		<div class="why-us-container">
+			<h2 class="section-title">POURQUOI NOUS CHOISIR ?</h2>
+			<div class="benefits-grid">
+				<div class="benefit-card">
+					<div class="benefit-icon">
+						<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+						</svg>
+					</div>
+					<h3 class="benefit-title">Spécialiste des PME</h3>
+					<p class="benefit-description">Expertise approfondie des défis RH locaux</p>
+				</div>
+
+				<div class="benefit-card">
+					<div class="benefit-icon">
+						<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+						</svg>
+					</div>
+					<h3 class="benefit-title">Approche personnalisée</h3>
+					<p class="benefit-description">Solutions 100% adaptées à votre secteur d'activité</p>
+				</div>
+
+				<div class="benefit-card">
+					<div class="benefit-icon">
+						<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+						</svg>
+					</div>
+					<h3 class="benefit-title">Gain de temps</h3>
+					<p class="benefit-description">Optimisation de votre productivité</p>
+				</div>
+
+				<div class="benefit-card">
+					<div class="benefit-icon">
+						<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+						</svg>
+					</div>
+					<h3 class="benefit-title">Équipe expérimentée</h3>
+					<p class="benefit-description">Professionnels engagés à votre service</p>
+				</div>
+
+				<div class="benefit-card">
+					<div class="benefit-icon">
+						<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+						</svg>
+					</div>
+					<h3 class="benefit-title">Flexibilité</h3>
+					<p class="benefit-description">Solutions adaptées à vos besoins</p>
 				</div>
 			</div>
 		</div>
@@ -153,14 +229,10 @@ import Layout from '../layouts/Layout.astro';
 
 	<section class="cta" data-animate>
 		<div class="cta-container">
-			<h2 class="section-title">Prêt à Commencer ?</h2>
-			<p class="cta-text">
-				Que vous soyez une PME à la recherche de jeunes talents motivés ou un jeune talent en quête d'opportunités professionnelles,
-				nous vous accompagnons dans votre développement et votre réussite.
-			</p>
+			<h2 class="section-title">FAITES LE CHOIX DE LA PERFORMANCE RH</h2>
+			<p class="cta-text">Contactez-nous aujourd'hui pour un diagnostic RH et pour évaluer votre affaire gratuitement</p>
 			<div class="cta-buttons">
-				<a href="/contact" class="cta-button primary">Je suis une PME</a>
-				<a href="/contact" class="cta-button secondary">Je suis un jeune talent</a>
+				<a href="/contact" class="cta-button primary">Contactez-nous</a>
 			</div>
 		</div>
 	</section>
@@ -170,7 +242,7 @@ import Layout from '../layouts/Layout.astro';
 	/* Hero Section */
 	.hero {
 		position: relative;
-		min-height: 80vh;
+		min-height: 60vh;
 		background: linear-gradient(120deg, var(--primary) 0%, var(--secondary) 100%);
 		color: var(--light);
 		padding: 6rem 1rem 4rem;
@@ -200,6 +272,13 @@ import Layout from '../layouts/Layout.astro';
 		opacity: 0.9;
 	}
 
+	.hero-buttons {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
 	.hero-decoration {
 		position: absolute;
 		inset: 0;
@@ -210,34 +289,127 @@ import Layout from '../layouts/Layout.astro';
 		opacity: 0.9;
 	}
 
-	/* Features Section */
-	.features {
+	/* About Section */
+	.about {
 		padding: 5rem 1rem;
 		background: var(--light);
 	}
 
-	.features-grid {
-		max-width: 1200px;
+	.about-container {
+		max-width: 800px;
 		margin: 0 auto;
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-		gap: 2rem;
+		text-align: center;
 	}
 
-	.feature-card {
+	.about-text {
+		font-size: 1.2rem;
+		line-height: 1.8;
+		color: var(--text);
+		opacity: 0.9;
+	}
+
+	/* Expertise Section */
+	.expertise {
+		padding: 5rem 1rem;
+		background: #f8fafc;
+	}
+
+	.expertise-container {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	.expertise-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		margin-top: 3rem;
+	}
+
+	.expertise-card {
 		background: white;
-		border-radius: 1rem;
 		padding: 2rem;
-		text-align: center;
+		border-radius: 1rem;
 		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 		transition: transform 0.3s ease;
 	}
 
-	.feature-card:hover {
+	.expertise-card:hover {
 		transform: translateY(-5px);
 	}
 
-	.feature-icon {
+	.expertise-icon {
+		width: 4rem;
+		height: 4rem;
+		margin-bottom: 1.5rem;
+		background: var(--primary);
+		color: white;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.expertise-title {
+		color: var(--primary);
+		font-size: 1.2rem;
+		font-weight: 700;
+		margin-bottom: 1rem;
+	}
+
+	.expertise-list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.expertise-list li {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		margin-bottom: 0.5rem;
+		color: var(--text);
+		opacity: 0.8;
+	}
+
+	.expertise-list li::before {
+		content: "•";
+		color: var(--accent);
+		font-weight: bold;
+	}
+
+	/* Value Section */
+	.value {
+		padding: 5rem 1rem;
+		background: var(--light);
+	}
+
+	.value-container {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	.value-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+		margin-top: 3rem;
+	}
+
+	.value-card {
+		background: white;
+		padding: 2rem;
+		border-radius: 1rem;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		text-align: center;
+		transition: transform 0.3s ease;
+	}
+
+	.value-card:hover {
+		transform: translateY(-5px);
+	}
+
+	.value-icon {
 		width: 4rem;
 		height: 4rem;
 		margin: 0 auto 1.5rem;
@@ -249,59 +421,16 @@ import Layout from '../layouts/Layout.astro';
 		justify-content: center;
 	}
 
-	.feature-title {
-		color: var(--primary);
-		font-size: 1.5rem;
-		font-weight: 700;
-		margin-bottom: 1rem;
-	}
-
-	.feature-description {
+	.value-text {
 		color: var(--text);
-		opacity: 0.8;
-	}
-
-	/* Why Us Section */
-	.why-us {
-		background: #fffde7;
-		padding: 5rem 1rem;
-	}
-
-	.why-us-content {
-		max-width: 800px;
-		margin: 0 auto;
-		text-align: center;
-	}
-
-	.section-title {
-		color: var(--primary);
-		font-size: clamp(1.8rem, 4vw, 2.5rem);
-		font-weight: 800;
-		margin-bottom: 2rem;
-	}
-
-	.benefits-list {
-		list-style: none;
-		padding: 0;
-	}
-
-	.benefit-item {
-		display: flex;
-		align-items: center;
-		gap: 1rem;
-		margin-bottom: 1rem;
 		font-size: 1.1rem;
-		color: var(--primary);
-	}
-
-	.benefit-icon {
-		font-size: 1.2rem;
+		line-height: 1.6;
 	}
 
 	/* Services Section */
 	.services {
 		padding: 5rem 1rem;
-		background: var(--light);
+		background: #f8fafc;
 	}
 
 	.services-container {
@@ -318,53 +447,97 @@ import Layout from '../layouts/Layout.astro';
 
 	.service-card {
 		background: white;
-		border-radius: 1rem;
 		padding: 2rem;
+		border-radius: 1rem;
 		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		transition: transform 0.3s ease;
 	}
 
-	.service-header {
-		display: flex;
-		align-items: center;
-		gap: 1rem;
-		margin-bottom: 2rem;
-	}
-
-	.service-icon {
-		width: 3rem;
-		height: 3rem;
-		background: var(--primary);
-		color: white;
-		border-radius: 0.5rem;
-		display: flex;
-		align-items: center;
-		justify-content: center;
+	.service-card:hover {
+		transform: translateY(-5px);
 	}
 
 	.service-title {
 		color: var(--primary);
-		font-size: 1.5rem;
+		font-size: 1.2rem;
 		font-weight: 700;
+		margin-bottom: 1rem;
 	}
 
 	.service-list {
 		list-style: none;
 		padding: 0;
+		margin: 0;
 	}
 
-	.service-item {
+	.service-list li {
 		display: flex;
 		align-items: center;
-		gap: 0.75rem;
-		margin-bottom: 1rem;
+		gap: 0.5rem;
+		margin-bottom: 0.5rem;
 		color: var(--text);
+		opacity: 0.8;
 	}
 
-	.check-icon {
-		width: 1.25rem;
-		height: 1.25rem;
+	.service-list li::before {
+		content: "•";
+		color: var(--accent);
+		font-weight: bold;
+	}
+
+	/* Why Us Section */
+	.why-us {
+		padding: 5rem 1rem;
+		background: var(--light);
+	}
+
+	.why-us-container {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	.benefits-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+		margin-top: 3rem;
+	}
+
+	.benefit-card {
+		background: white;
+		padding: 2rem;
+		border-radius: 1rem;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		text-align: center;
+		transition: transform 0.3s ease;
+	}
+
+	.benefit-card:hover {
+		transform: translateY(-5px);
+	}
+
+	.benefit-icon {
+		width: 4rem;
+		height: 4rem;
+		margin: 0 auto 1.5rem;
+		background: var(--primary);
+		color: white;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.benefit-title {
 		color: var(--primary);
-		flex-shrink: 0;
+		font-size: 1.2rem;
+		font-weight: 700;
+		margin-bottom: 0.5rem;
+	}
+
+	.benefit-description {
+		color: var(--text);
+		opacity: 0.8;
 	}
 
 	/* CTA Section */
@@ -419,23 +592,35 @@ import Layout from '../layouts/Layout.astro';
 	}
 
 	/* Responsive Design */
+	@media (max-width: 1024px) {
+		.hero {
+			min-height: 50vh;
+		}
+
+		.expertise-grid,
+		.value-grid,
+		.services-grid,
+		.benefits-grid {
+			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		}
+	}
+
 	@media (max-width: 768px) {
 		.hero {
-			min-height: 60vh;
+			min-height: 40vh;
 			padding: 4rem 1rem 3rem;
 		}
 
-		.features-grid,
-		.services-grid {
-			grid-template-columns: 1fr;
-		}
-
-		.cta-buttons {
+		.hero-buttons {
 			flex-direction: column;
 		}
 
 		.cta-button {
 			width: 100%;
+		}
+
+		.about-text {
+			font-size: 1.1rem;
 		}
 	}
 
@@ -452,7 +637,10 @@ import Layout from '../layouts/Layout.astro';
 			font-size: 1.8rem;
 		}
 
-		.service-card {
+		.expertise-card,
+		.value-card,
+		.service-card,
+		.benefit-card {
 			padding: 1.5rem;
 		}
 	}
